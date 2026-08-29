@@ -1,0 +1,21 @@
+import type { Metadata } from "next";
+import { PageSchema, SiteFooter, SiteHeader } from "../site-shell";
+
+export const metadata: Metadata = {
+  title: "About the Hospitality Growth Studio",
+  description: "No Quiet Nights is a UK hospitality growth studio built around commercial moments, clear scopes and useful reporting for restaurants, pubs, bars and drinks brands.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About No Quiet Nights", description: "Hospitality marketing without the agency theatre.", url: "/about", type: "website" },
+};
+
+export default function AboutPage() {
+  return <><SiteHeader/><main id="main-content">
+    <PageSchema name="About No Quiet Nights" description="A UK hospitality growth studio built around commercial moments, clear scopes and useful reporting." path="/about"/>
+    <section className="about-hero page-top"><div className="about-type"><p className="eyebrow">Why this studio exists</p><h1>Hospitality marketing without the <em>agency theatre.</em></h1><p>For businesses whose opportunity expires in real time: tonight’s empty table, this week’s event, this launch window and the guest who may never be asked back.</p></div><div className="about-photo"><img alt="Restaurant staff preparing a dining room before service" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=82"/><span>BEFORE<br/>SERVICE</span></div></section>
+    <section className="manifesto section-pad"><span className="manifesto-index">00 / MANIFESTO</span><h2>The room matters<br/>more than the <em>report.</em></h2><p>Hospitality is full of marketing activity that looks busy but leaves the operator asking one fair question: what changed? We begin with the commercial moment, choose the shortest useful route to demand and explain the result in plain English.</p></section>
+    <section className="principles-board"><article><span>01</span><h3>Commercial before cosmetic</h3><p>Creative should make the business easier to choose, not merely easier to admire.</p></article><article><span>02</span><h3>Specific before broad</h3><p>A defined service, audience and reason beats “more awareness”.</p></article><article><span>03</span><h3>Owned before rented</h3><p>Search, websites, permission and CRM reduce dependence on platforms.</p></article><article><span>04</span><h3>Plain English before theatre</h3><p>No inflated decks. No mystery metrics. No hiding simple work behind jargon.</p></article><article><span>05</span><h3>Scale after signal</h3><p>Start with the smallest useful intervention. Increase scope when evidence supports it.</p></article></section>
+    <section className="studio-model section-pad"><div className="studio-model-photo"><img alt="Hospitality service in a warmly lit dining room" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=82"/></div><div className="studio-model-copy"><p className="eyebrow light">How the studio runs</p><h2>Senior thinking.<br/><em>Useful doing.</em></h2><p>No Quiet Nights is built as a focused studio: strategy stays close to the work, specialists join the brief they are right for, and the operator never pays for layers of account theatre.</p><ul><li>One clear commercial priority</li><li>A visible scope</li><li>Fast, named approvals</li><li>Direct communication</li><li>Useful reporting</li><li>An honest “not yet” when more marketing is not the answer</li></ul></div></section>
+    <section className="ownership-section section-pad"><p className="eyebrow">A simple commitment</p><h2>Your brand.<br/>Your accounts.<br/><em>Your data.</em></h2><p>Where platforms allow, the business should retain ownership of its accounts, creative, audiences and customer data. Exact access and handover terms belong in the signed scope—not buried in a footer.</p></section>
+    <section className="about-final"><span>NQN / UK</span><h2>Bring us the<br/><em>trading problem.</em></h2><a className="button button-cream" href="/start">Find my starting point <span>↗</span></a></section>
+  </main><SiteFooter/></>;
+}
