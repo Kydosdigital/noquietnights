@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <section className="services-hero section-pad">
           <p className="eyebrow">Hospitality marketing services</p>
           <h1>More than posts.<br/><em>A system for filling the week.</em></h1>
-          <p className="services-hero-copy">Choose one pressure point or connect the whole journey. Every service is built around a simple question: what should this do for the venue commercially?</p>
+          <p className="services-hero-copy">Built for restaurants, pubs, bars and hospitality brands. Choose one pressure point or connect the whole journey. Every service is built around a simple question: what should this do for the venue commercially?</p>
         </section>
 
         <section className="services-grid section-pad">
