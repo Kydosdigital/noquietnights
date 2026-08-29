@@ -33,7 +33,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <strong>{service.promise}</strong>
             <p>{service.intro}</p>
             <div className="service-hero-actions">
-              <Link href={`/start?service=${service.slug}`} className="button button-signal">Talk about this service <span>↗</span></Link>
+              <Link href={`/start?service=${service.slug}`} className="button button-signal">Talk to us about this <span>↗</span></Link>
               <Link href="/pricing" className="text-link">See pricing →</Link>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
 
         <section className="service-outcomes section-pad">
-          <p className="eyebrow">What this should change</p>
+          <p className="eyebrow">What this should improve</p>
           <div className="outcome-grid">
             {service.outcomes.map((outcome, index) => (
               <article key={outcome}>
@@ -57,7 +57,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         <section className="service-work section-pad">
           <div className="service-section-head">
-            <p className="eyebrow light">What we actually do</p>
+            <p className="eyebrow light">What we do</p>
             <h2>Simple words.<br/><em>Clear jobs.</em></h2>
           </div>
           <div className="work-list">
@@ -75,14 +75,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         <section className="service-proof section-pad">
           <div className="service-section-head">
-            <p className="eyebrow">Proof, not theatre</p>
-            <h2>How we would<br/><em>prove the work.</em></h2>
-            <p>These are evidence types, not invented client results. When your approved case studies are ready, the strongest real examples can drop straight into this section.</p>
+            <p className="eyebrow">How we measure it</p>
+            <h2>Know what your<br/><em>marketing is doing.</em></h2>
+            <p>We use the evidence that fits the job, from Google searches and ad results to enquiries, bookings, customer-list growth and repeat visits.</p>
           </div>
           <div className="proof-grid">
             {service.proof.map((item) => (
               <article key={item.label}>
-                <span>Evidence</span>
+                <span>We track</span>
                 <h3>{item.label}</h3>
                 <p>{item.text}</p>
               </article>
@@ -91,7 +91,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </section>
 
         <section className="service-fit section-pad">
-          <p className="eyebrow light">Good fit if</p>
+          <p className="eyebrow light">This is useful if</p>
           <h2>This service makes sense when...</h2>
           <ul>
             {service.bestFor.map((item) => <li key={item}><span>✓</span>{item}</li>)}
@@ -100,8 +100,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         <section className="service-next section-pad">
           <p className="eyebrow">Need more than one service?</p>
-          <h2>Connect it into the<br/><em>Full House system.</em></h2>
-          <p>We can combine visibility, paid demand, SEO, customer capture and repeat-visit marketing into one joined-up plan.</p>
+          <h2>Let us handle the<br/><em>whole marketing picture.</em></h2>
+          <p>We can combine social media, Google, ads, customer follow-up and repeat-customer marketing into one clear plan.</p>
           <div>
             <Link href="/pricing#monthly" className="button button-ink">See monthly plans <span>↗</span></Link>
             <Link href="/services" className="text-link">Explore all services →</Link>
