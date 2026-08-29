@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://no-quiet-nights-lyc183gjt-kydosdigitals-projects.vercel.app/sitemap.xml
