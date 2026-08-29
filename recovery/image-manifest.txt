@@ -1,0 +1,15 @@
+# Binary image asset manifest
+
+These seven JPEG assets are part of the live No Quiet Nights website.
+
+The connected Vercel tool returns binary image responses as decoded text, so copying those responses into GitHub would corrupt the files. The originals remain live at the exact URLs below:
+
+https://no-quiet-nights.vercel.app/images/chef-pass.jpg
+https://no-quiet-nights.vercel.app/images/cocktail.jpg
+https://no-quiet-nights.vercel.app/images/food-detail.jpg
+https://no-quiet-nights.vercel.app/images/guests-table.jpg
+https://no-quiet-nights.vercel.app/images/hero-service.jpg
+https://no-quiet-nights.vercel.app/images/pub-atmosphere.jpg
+https://no-quiet-nights.vercel.app/images/team-service.jpg
+
+Do not treat placeholder or decoded copies as originals.
