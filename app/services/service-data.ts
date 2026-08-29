@@ -17,21 +17,21 @@ export const services: Service[] = [
     slug: "social-media-management",
     eyebrow: "Social media management",
     title: "Stay visible without living on your phone.",
-    promise: "We plan, create and manage hospitality social content that gives people a reason to notice you, visit and come back.",
-    intro: "A restaurant does not need random posts. It needs a consistent story around the food, the room, the people, the offers and the moments that make somebody choose your venue tonight.",
+    promise: "We plan, create and manage social content that helps people notice your venue, visit and come back.",
+    intro: "Your social media should show people what the food, drinks, atmosphere and experience are really like. We keep it active, useful and tied to the things you actually want to sell.",
     image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Restaurant table with food prepared for guests",
-    outcomes: ["A feed that looks current and worth visiting", "Planned content around offers, events and quieter days", "More useful engagement with local customers", "A clear monthly content and campaign plan"],
+    outcomes: ["A feed that looks current and worth visiting", "Content built around offers, events and quieter days", "More useful engagement with local customers", "A clear monthly content plan"],
     work: [
-      { title: "Plan", text: "We map the month around your commercial priorities, not just national awareness days." },
-      { title: "Create", text: "We turn your existing photos, videos, menus and offers into platform-ready content." },
-      { title: "Publish", text: "We schedule consistent posts and stories across the agreed channels." },
-      { title: "Manage", text: "We keep an eye on comments, community activity and the content that is actually getting attention." }
+      { title: "Plan", text: "We plan the month around what your venue needs to promote." },
+      { title: "Create", text: "We turn your photos, videos, menus and offers into content for the right platforms." },
+      { title: "Publish", text: "We schedule regular posts and stories across the agreed channels." },
+      { title: "Manage", text: "We monitor comments, local engagement and the content people respond to most." }
     ],
     proof: [
-      { label: "Content consistency", text: "Before-and-after posting cadence, content mix and profile quality." },
-      { label: "Audience response", text: "Reach, saves, shares, profile visits and meaningful engagement from platform reporting." },
-      { label: "Commercial activity", text: "Campaign links, enquiries, offer redemptions or booking actions where tracking is available." }
+      { label: "Posting consistency", text: "How regularly the venue posts and whether the profile looks active and current." },
+      { label: "Audience response", text: "Reach, saves, shares, profile visits and meaningful engagement." },
+      { label: "Customer actions", text: "Tracked clicks, enquiries, offer redemptions or bookings where tracking is available." }
     ],
     bestFor: ["Restaurants with inconsistent posting", "Pubs and bars with events or weekly offers", "Hospitality teams without time to manage social properly"]
   },
@@ -39,43 +39,43 @@ export const services: Service[] = [
     slug: "paid-ads",
     eyebrow: "Meta + Google advertising",
     title: "Put the right offer in front of people ready to act.",
-    promise: "Paid media should create measurable demand, not just impressions.",
-    intro: "We use Meta and Google to reach local customers, capture high-intent searches and retarget people who have already shown interest in your venue.",
+    promise: "Paid ads should help bring in customers, not just generate impressions.",
+    intro: "We use Meta and Google to reach people nearby, people searching for what you offer and people who have already shown interest in your venue.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Busy modern restaurant dining room",
-    outcomes: ["More qualified local traffic", "Campaigns built around bookings, events, private hire or offers", "Retargeting for people who did not convert first time", "Clear reporting on spend and useful actions"],
+    outcomes: ["More useful local traffic", "Campaigns built around bookings, events, private hire or offers", "Follow-up ads for people who did not book first time", "Clear reporting on spend and results"],
     work: [
-      { title: "Offer", text: "First we make sure there is a strong commercial reason for somebody to click." },
-      { title: "Target", text: "We build local, interest, intent and retargeting audiences around the campaign." },
-      { title: "Test", text: "We test creative, copy, audiences and landing-page routes before scaling spend." },
-      { title: "Measure", text: "We track the actions that matter, not just reach and clicks." }
+      { title: "Offer", text: "We make sure there is a strong reason for someone to click before spending money on ads." },
+      { title: "Target", text: "We show ads to the people most likely to care, including nearby customers and people already searching." },
+      { title: "Test", text: "We test different ads, messages and audiences to see what gets the best response." },
+      { title: "Measure", text: "We track enquiries, bookings and useful actions, not just clicks." }
     ],
     proof: [
-      { label: "Ads Manager", text: "Spend, reach, clicks, cost per result and campaign-level performance." },
-      { label: "Google Ads", text: "Search terms, intent, conversion actions and cost by campaign." },
-      { label: "Booking journey", text: "Tracked enquiries, bookings or landing-page actions where the venue systems allow it." }
+      { label: "Meta ads", text: "Spend, reach, clicks, cost per result and campaign performance." },
+      { label: "Google ads", text: "Searches, clicks, enquiries and cost by campaign." },
+      { label: "Bookings and enquiries", text: "Tracked bookings, enquiries or landing-page actions where the venue systems allow it." }
     ],
-    bestFor: ["Venues with a strong offer that needs more reach", "Private hire and event campaigns", "New menu, launch and seasonal demand"]
+    bestFor: ["Venues with a strong offer that needs more reach", "Private hire and event campaigns", "New menu, launch and seasonal campaigns"]
   },
   {
     slug: "local-seo",
     eyebrow: "Local SEO + Google visibility",
     title: "Show up when somebody nearby is deciding where to go.",
-    promise: "Local search is one of the highest-intent moments in hospitality.",
-    intro: "People search for restaurants, Sunday roasts, cocktails, private dining, brunch and venues near them every day. We improve the signals that help Google understand where you are, what you offer and why you are relevant.",
+    promise: "We help more local people find you when they search on Google and Maps.",
+    intro: "People search for restaurants, Sunday roasts, cocktails, private dining, brunch and venues near them every day. We help Google understand where you are, what you offer and why you are relevant.",
     image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Warm hospitality venue interior with tables and lights",
-    outcomes: ["A stronger Google Business Profile", "Better local relevance for high-intent searches", "Improved review strategy and map visibility", "SEO recommendations connected to what customers actually search for"],
+    outcomes: ["A stronger Google Business Profile", "Better visibility for useful local searches", "A better review process and stronger Maps presence", "Website improvements based on what customers search for"],
     work: [
-      { title: "Google profile", text: "Categories, services, descriptions, photos, menus, links and conversion paths." },
-      { title: "Local search", text: "We map the searches that matter by location, occasion and venue type." },
-      { title: "Website SEO", text: "We improve page relevance, titles, internal links and local signals." },
-      { title: "Reviews", text: "We build a practical process for generating and responding to customer reviews." }
+      { title: "Google profile", text: "We improve your categories, services, descriptions, photos, menus and important links." },
+      { title: "Local searches", text: "We find the searches that matter by location, occasion and venue type." },
+      { title: "Website SEO", text: "We improve page titles, content, links and local information so Google can understand the site better." },
+      { title: "Reviews", text: "We help you create a practical way to ask for and respond to customer reviews." }
     ],
     proof: [
-      { label: "Search visibility", text: "Google Search Console impressions, clicks and query movement." },
-      { label: "Google Business Profile", text: "Views, calls, website clicks, direction requests and profile activity." },
-      { label: "Rank tracking", text: "Before-and-after visibility for agreed local search terms, without pretending rankings are guaranteed." }
+      { label: "Google searches", text: "How often you appear in search, what people search for and how many click through." },
+      { label: "Google Business Profile", text: "Profile views, calls, website clicks, direction requests and other activity." },
+      { label: "Local rankings", text: "Changes in visibility for the local searches we agree to track." }
     ],
     bestFor: ["Independent restaurants", "Pubs and bars competing locally", "Venues with strong reviews but weak Google visibility"]
   },
@@ -83,89 +83,89 @@ export const services: Service[] = [
     slug: "content-production",
     eyebrow: "Photography + video production",
     title: "Give people something worth stopping for.",
-    promise: "When you need fresh assets, we can build an on-site content crew around the venue.",
-    intro: "Food, drinks, atmosphere and people are visual. We scope photography, video and short-form production separately so the right crew turns up for the job rather than hiding production costs inside a generic package.",
+    promise: "When you need fresh photos and videos, we can bring the right content team to your venue.",
+    intro: "Food, drinks and atmosphere are visual. We price shoots separately so you get the right photographer, videographer or social content team for the job.",
     image: "https://images.unsplash.com/photo-1470337458703-46ad1756a1875?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Cocktails being served in a bar",
-    outcomes: ["A bank of current, usable venue content", "Food and drink assets for organic and paid campaigns", "Short-form video designed for Reels and TikTok", "Campaign-specific shoots for launches and events"],
+    outcomes: ["A bank of fresh venue content", "Food and drink photos for social media and ads", "Short videos for Reels and TikTok", "Content for launches, events and new menus"],
     work: [
-      { title: "Shot list", text: "We agree what the business actually needs before the camera comes out." },
-      { title: "Production", text: "Photography, videography, creator-led content or a mixed crew depending on scope." },
-      { title: "Edit", text: "Assets are edited for the channels and campaigns they are meant to serve." },
-      { title: "Deploy", text: "The content feeds into social, advertising, website and CRM campaigns." }
+      { title: "Plan the shoot", text: "We agree what you need before anyone turns up with a camera." },
+      { title: "Shoot", text: "We arrange photography, video or creator-led content depending on the job." },
+      { title: "Edit", text: "We prepare the content for the channels where it will be used." },
+      { title: "Use it", text: "The finished content can be used across social media, ads, your website and customer emails." }
     ],
     proof: [
-      { label: "Asset delivery", text: "A clear deliverables list showing exactly what was shot and supplied." },
-      { label: "Creative performance", text: "Compare which images and videos produce stronger watch time, clicks, saves or ad response." },
-      { label: "Usage", text: "Show how one shoot becomes weeks of organic, paid, website and email creative." }
+      { label: "What you receive", text: "A clear list of the photos and videos delivered from the shoot." },
+      { label: "What performs best", text: "We compare which images and videos get stronger views, clicks, saves or ad results." },
+      { label: "How far the content goes", text: "We show how one shoot can support weeks of social, advertising, website and email content." }
     ],
     bestFor: ["Venues with outdated imagery", "Restaurants launching a new menu", "Bars, events and hospitality brands needing regular short-form video"]
   },
   {
     slug: "crm-repeat-customers",
-    eyebrow: "CRM + repeat customers",
-    title: "Do not pay to reacquire every customer from scratch.",
-    promise: "We help venues capture customer relationships and create reasons for people to come back.",
-    intro: "A booking, birthday, event registration, Wi-Fi sign-up or offer can become the start of a customer relationship, provided the data is collected transparently and with the right permissions.",
+    eyebrow: "Customer follow-up + repeat visits",
+    title: "Do not pay to win the same customer from scratch every time.",
+    promise: "We help you keep customer details and give people good reasons to come back.",
+    intro: "Bookings, birthdays, Wi-Fi sign-ups, offers and events can all help you build a customer list, as long as the information is collected clearly and with the right permission.",
     image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Guests dining together in a restaurant",
-    outcomes: ["A growing permission-based customer database", "Better follow-up after enquiries and visits", "Birthday, VIP and win-back campaigns", "Less dependence on constantly finding strangers"],
+    outcomes: ["A growing customer email and SMS list", "Better follow-up after enquiries and visits", "Birthday, VIP and win-back campaigns", "Less dependence on constantly finding new people"],
     work: [
-      { title: "Capture", text: "We identify practical ways to collect useful first-party data through existing customer journeys." },
-      { title: "Segment", text: "New, recent, regular, high-value and lapsed customers should not all receive the same message." },
-      { title: "Automate", text: "We build agreed email and SMS journeys for follow-up, reminders and return visits." },
-      { title: "Reactivate", text: "We create campaigns for customers who already know the venue but have stopped visiting." }
+      { title: "Collect", text: "We help you collect customer details through bookings, Wi-Fi, offers, events and your website." },
+      { title: "Group", text: "Someone who came yesterday should not get the same message as someone who has not visited in six months." },
+      { title: "Follow up", text: "We set up agreed email and SMS messages for reminders, offers and return visits." },
+      { title: "Bring people back", text: "We create campaigns for previous customers who already know your venue." }
     ],
     proof: [
-      { label: "Database growth", text: "Opt-in contacts added through agreed sources and campaigns." },
-      { label: "Email + SMS", text: "Delivery, opens, clicks, replies and attributed actions where available." },
-      { label: "Return activity", text: "Win-back redemptions, repeat bookings or customer-segment response where venue systems can track it." }
+      { label: "Customer list growth", text: "How many permission-based contacts are added through agreed sources and campaigns." },
+      { label: "Email + SMS", text: "Delivery, opens, clicks, replies and tracked actions where available." },
+      { label: "Return visits", text: "Win-back redemptions, repeat bookings or responses from previous customers where tracking is possible." }
     ],
-    bestFor: ["Venues with an existing booking database they rarely use", "Businesses with strong one-off trade but weak repeat marketing", "Operators wanting birthday, loyalty or VIP journeys"]
+    bestFor: ["Venues with a booking database they rarely use", "Businesses with strong one-off trade but weak repeat marketing", "Operators wanting birthday, loyalty or VIP campaigns"]
   },
   {
     slug: "website-conversion",
-    eyebrow: "Website + conversion",
+    eyebrow: "Website + bookings",
     title: "Make the next action impossible to miss.",
-    promise: "A hospitality website should help somebody decide, trust you and act quickly.",
-    intro: "Menus buried in PDFs, broken booking links and unclear offers lose demand. We improve or build websites around the commercial actions the venue needs customers to take.",
+    promise: "Your website should help people decide, trust you and book quickly.",
+    intro: "Menus buried in PDFs, broken booking links and unclear offers lose customers. We improve or build websites so the important actions are easy to find.",
     image: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Restaurant service and dining environment",
-    outcomes: ["Clearer booking and enquiry journeys", "Landing pages built around specific campaigns", "Better mobile experience", "SEO and conversion working together instead of separately"],
+    outcomes: ["Clearer booking and enquiry pages", "Landing pages for specific offers and campaigns", "A better mobile experience", "SEO and bookings working together"],
     work: [
-      { title: "Audit", text: "We look for friction between the visitor arriving and the action you want them to take." },
-      { title: "Prioritise", text: "Booking, menu, private hire, events, location and contact information are given the right hierarchy." },
-      { title: "Build", text: "We create focused pages and conversion paths around real customer intent." },
-      { title: "Track", text: "Important buttons, forms and campaign actions are measured where possible." }
+      { title: "Check", text: "We look for anything that makes it harder for a visitor to book, enquire or find the information they need." },
+      { title: "Prioritise", text: "We make booking, menus, private hire, events, location and contact information easy to find." },
+      { title: "Build", text: "We create simple pages around what customers actually want to do." },
+      { title: "Track", text: "We measure important buttons, forms and campaign actions where possible." }
     ],
     proof: [
-      { label: "Before + after", text: "Documented changes to booking paths, page hierarchy and mobile usability." },
-      { label: "Analytics", text: "Traffic, engagement and conversion events from the agreed analytics setup." },
-      { label: "Campaign pages", text: "Performance of dedicated landing pages compared with sending every visitor to the homepage." }
+      { label: "Before and after", text: "Clear examples of how booking pages, navigation and mobile usability were improved." },
+      { label: "Website activity", text: "Traffic, engagement and important actions from the agreed analytics setup." },
+      { label: "Campaign pages", text: "How dedicated offer pages perform compared with sending everyone to the homepage." }
     ],
     bestFor: ["Restaurants with outdated or confusing websites", "Private hire and event-led venues", "Businesses running ads without dedicated landing pages"]
   },
   {
     slug: "launch-growth-strategy",
-    eyebrow: "Launch + growth strategy",
-    title: "Give the venue a plan before you give it more marketing activity.",
-    promise: "We build the commercial marketing plan around the actual problem, from a quiet Tuesday to a completely new opening.",
-    intro: "The work can include positioning, offer development, launch sequencing, local SEO, content, paid media, database capture, partnerships and repeat-customer journeys. The mix depends on what needs to move.",
+    eyebrow: "Launch + marketing strategy",
+    title: "Have a clear plan before you spend more on marketing.",
+    promise: "We build a practical marketing plan around the problem you actually need to solve, from a quiet Tuesday to a new opening.",
+    intro: "The plan might include offers, social media, Google, ads, customer follow-up, partnerships and repeat-customer marketing. We choose what makes sense for the venue instead of forcing every channel into the plan.",
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=82",
     imageAlt: "Restaurant dining table set for service",
-    outcomes: ["A clear 30, 60 or 90-day marketing plan", "Offers built around real commercial gaps", "Channels working together instead of in isolation", "A monthly growth review focused on what to do next"],
+    outcomes: ["A clear 30, 60 or 90-day marketing plan", "Offers built around real quiet periods or missed opportunities", "Marketing channels working together", "A monthly review of what worked and what to do next"],
     work: [
-      { title: "Diagnose", text: "We identify the quiet periods, weak journeys and missed commercial opportunities." },
-      { title: "Plan", text: "We decide what needs to happen, in what order, and what success should look like." },
-      { title: "Launch", text: "Content, SEO, paid, CRM, offers and partnerships are activated around one joined-up plan." },
-      { title: "Learn", text: "We review evidence and change the next month based on what actually happened." }
+      { title: "Find the problem", text: "We identify the quiet periods, weak booking journeys and missed opportunities." },
+      { title: "Make the plan", text: "We decide what should happen, in what order and what we need to measure." },
+      { title: "Launch", text: "We put the agreed social, Google, ads, offers and customer follow-up into action." },
+      { title: "Improve", text: "We review what happened and change the next month based on the results." }
     ],
     proof: [
-      { label: "Plan vs action", text: "A documented strategy with owners, dates, channels and measurable objectives." },
-      { label: "Commercial reporting", text: "Campaign evidence connected back to the agreed business objective." },
-      { label: "Iteration", text: "A visible record of what we tested, what happened and what we changed next." }
+      { label: "The plan", text: "A clear plan showing what is happening, when, who owns it and what success looks like." },
+      { label: "Results", text: "Campaign evidence tied back to the business goal we agreed at the start." },
+      { label: "What changed", text: "A simple record of what we tried, what happened and what we changed next." }
     ],
-    bestFor: ["New restaurant and bar launches", "Venues with quiet periods that need a focused growth plan", "Operators tired of disconnected agencies and suppliers"]
+    bestFor: ["New restaurant and bar launches", "Venues with quiet periods that need a focused marketing plan", "Operators tired of different suppliers working separately"]
   }
 ];
 
