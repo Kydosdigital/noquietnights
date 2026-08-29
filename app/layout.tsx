@@ -23,23 +23,15 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  robots: isProduction
-    ? {
-        index: true,
-        follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-image-preview": "large",
-          "max-snippet": -1,
-          "max-video-preview": -1,
-        },
-      }
+  ...(isProduction
+    ? {}
     : {
-        index: false,
-        follow: false,
-        noarchive: true,
-      },
+        robots: {
+          index: false,
+          follow: false,
+          noarchive: true,
+        },
+      }),
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -57,10 +49,53 @@ export const metadata: Metadata = {
   },
 };
 
+const organisationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "No Quiet Nights",
+      url: siteUrl,
+      description:
+        "Hospitality marketing partner for UK restaurants, pubs and bars, covering local SEO, social media, paid demand, CRM and repeat-customer growth.",
+      areaServed: {
+        "@type": "Country",
+        name: "United Kingdom",
+      },
+      knowsAbout: [
+        "Hospitality marketing",
+        "Restaurant marketing",
+        "Pub marketing",
+        "Bar marketing",
+        "Local SEO",
+        "Google Business Profile optimisation",
+        "Paid media",
+        "CRM",
+        "Customer retention",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "No Quiet Nights",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en-GB",
+    },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
