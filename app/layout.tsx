@@ -66,6 +66,7 @@ const organisationSchema = {
       "@id": `${siteUrl}/#organization`,
       name: "No Quiet Nights",
       url: siteUrl,
+      email: "hello@noquietnights.co.uk",
       description:
         "Hospitality marketing partner for UK restaurants, pubs, bars and drinks brands, covering local SEO, social media, paid advertising, content and repeat-customer marketing.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
@@ -112,6 +113,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-726NVF79ZM');`}
         </Script>
+        <Script src="https://links.luwados.com/js/form_embed.js" strategy="lazyOnload" />
       </body>
     </html>
   );
