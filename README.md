@@ -1,20 +1,15 @@
 # No Quiet Nights
 
-This repository contains a recovery snapshot of the live **NO QUIET NIGHTS** website deployed on Vercel.
+Editable Next.js source for the No Quiet Nights hospitality marketing website.
 
-## Recovery status
+## Deployment workflow
 
-The production website was deployed directly from a Codex workspace using the Vercel CLI, rather than from GitHub. Vercel confirms that the successful build extracted 41 deployment files, but the connected Vercel interface does not expose the original uploaded Next.js source tree for download.
+Work is developed on branches, previewed automatically in Vercel, and merged to `main` only after approval. Vercel deploys `main` to production.
 
-To avoid falsely presenting reconstructed files as the original source, this repository preserves:
+## Technical SEO
 
-- rendered HTML for every public route found in the production build
-- referenced deployed CSS and JavaScript chunks that can be retrieved as text
-- robots.txt and sitemap.xml
-- the SVG favicon
-- an image manifest pointing to the binary image assets still hosted by Vercel
-- deployment metadata and recovery notes
+The current SEO completion branch restores and optimises the core public routes, including pricing, insights, about, restaurants, pubs and bars, drinks brands, work, privacy and photography credits. Commercial/indexable pages are included in the XML sitemap; utility pages such as privacy and credits remain crawlable but are marked `noindex, follow`.
 
-See `recovery/README.md` for details.
+## Recovery
 
-Production: https://no-quiet-nights.vercel.app
+The `recovery/` directory contains rendered pages and deployed assets recovered from the earlier production build. It is preserved as a reference source while the site is rebuilt into editable Next.js routes.
