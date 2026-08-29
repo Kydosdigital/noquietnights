@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" role="img" aria-labelledby="title desc">
+  <title id="title">No Quiet Nights</title>
+  <desc id="desc">Official No Quiet Nights logo in near black and signal orange.</desc>
+  <g transform="translate(28 30)">
+    <path d="M30 30h92l132 156V30h86v330h-86L116 200v160H30z" fill="#11100E"/>
+    <circle cx="132" cy="270" r="77" fill="#F2EDDF" stroke="#11100E" stroke-width="24"/>
+    <circle cx="132" cy="270" r="18" fill="#FF472D"/>
+    <path d="M181 319l76 76" stroke="#11100E" stroke-width="24" stroke-linecap="square"/>
+  </g>
+  <g font-family="Arial Narrow, Roboto Condensed, Helvetica Neue, Arial, sans-serif" font-stretch="condensed" font-weight="900">
+    <text x="395" y="188" font-size="138" letter-spacing="-7" fill="#11100E">NO QUIET</text>
+    <text x="395" y="338" font-size="152" letter-spacing="-8" fill="#FF472D">NIGHTS.</text>
+  </g>
+</svg>
