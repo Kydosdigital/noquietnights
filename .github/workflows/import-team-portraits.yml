@@ -1,0 +1,77 @@
+name: Import team placeholder portraits
+
+on:
+  push:
+    branches:
+      - site/team-page
+    paths:
+      - .github/workflows/import-team-portraits.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Download Pexels placeholder portraits
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/team
+          download () {
+            name="$1"
+            id="$2"
+            curl -A "Mozilla/5.0" -L --fail --retry 4 --retry-delay 2               "https://images.pexels.com/photos/$id/pexels-photo-$id.jpeg?auto=compress&cs=tinysrgb&w=1200"               -o "public/images/team/$name.jpg"
+          }
+          download maya-bennett 4427622
+          download daniel-okafor 6077859
+          download priya-mehta 37830403
+          download elliot-james 12903019
+          download amara-cole 10375968
+          download lewis-grant 4872076
+          download nadia-khan 8111827
+          download jordan-blake 38889914
+          download chloe-morgan 12903030
+
+          count="$(find public/images/team -type f -name '*.jpg' | wc -l)"
+          test "$count" -eq 9
+          echo "Downloaded $count team portraits."
+
+      - name: Add portrait source manifest
+        run: |
+          cat > public/images/team/README.md <<'EOF'
+          # Placeholder team portraits
+
+          Temporary Pexels stock photography used on the sample No Quiet Nights team page.
+
+          | File | Pexels source |
+          |---|---|
+          | maya-bennett.jpg | https://www.pexels.com/photo/4427622/ |
+          | daniel-okafor.jpg | https://www.pexels.com/photo/6077859/ |
+          | priya-mehta.jpg | https://www.pexels.com/photo/37830403/ |
+          | elliot-james.jpg | https://www.pexels.com/photo/12903019/ |
+          | amara-cole.jpg | https://www.pexels.com/photo/10375968/ |
+          | lewis-grant.jpg | https://www.pexels.com/photo/4872076/ |
+          | nadia-khan.jpg | https://www.pexels.com/photo/8111827/ |
+          | jordan-blake.jpg | https://www.pexels.com/photo/38889914/ |
+          | chloe-morgan.jpg | https://www.pexels.com/photo/12903030/ |
+
+          These portraits must not be represented as photographs of real No Quiet Nights employees. Replace them when real team photography is available.
+          EOF
+
+      - name: Commit portraits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/team
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "assets: add placeholder team portraits [skip ci]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
