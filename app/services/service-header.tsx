@@ -8,8 +8,13 @@ export default function ServiceHeader() {
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         <Link href="/services">Services</Link>
+        <Link href="/restaurants">Restaurants</Link>
+        <Link href="/pubs-bars">Pubs + bars</Link>
+        <Link href="/drinks-brands">Drinks brands</Link>
+        <Link href="/work">Proof</Link>
         <Link href="/pricing">Pricing</Link>
         <Link href="/insights">Insights</Link>
+        <Link href="/about">About</Link>
       </nav>
       <Link className="nav-cta" href="/start">Start a project <span>↗</span></Link>
     </header>
