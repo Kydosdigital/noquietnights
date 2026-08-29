@@ -3,7 +3,7 @@ import Script from "next/script";
 import "../recovery/deployed-assets/_next/static/chunks/0eay0~-68.o85.css";
 import "./overrides.css";
 
-const siteUrl = "https://no-quiet-nights.vercel.app";
+const siteUrl = "https://www.noquietnights.co.uk";
 const isProduction = process.env.VERCEL_ENV === "production";
 
 export const metadata: Metadata = {
@@ -58,10 +58,49 @@ export const metadata: Metadata = {
   },
 };
 
+const organisationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "No Quiet Nights",
+      url: siteUrl,
+      description:
+        "Hospitality marketing partner for UK restaurants, pubs, bars and drinks brands, covering local SEO, social media, paid advertising, content and repeat-customer marketing.",
+      areaServed: { "@type": "Country", name: "United Kingdom" },
+      knowsAbout: [
+        "Hospitality marketing",
+        "Restaurant marketing",
+        "Pub marketing",
+        "Bar marketing",
+        "Drinks brand marketing",
+        "Local SEO",
+        "Google Business Profile optimisation",
+        "Paid advertising",
+        "Social media management",
+        "Customer retention",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "No Quiet Nights",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en-GB",
+    },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationSchema) }}
+        />
         {children}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-726NVF79ZM"
