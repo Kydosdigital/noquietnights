@@ -6,7 +6,9 @@
     "node": "22.x"
   },
   "scripts": {
+    "predev": "node scripts/migrate-site-domain.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/migrate-site-domain.mjs",
     "build": "next build",
     "start": "next start"
   },
