@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LeadForm from "../components/lead-form";
 import { services } from "./service-data";
 import ServiceHeader from "./service-header";
 
@@ -63,9 +64,10 @@ export default function ServicesPage() {
           <p>If people cannot find you, Google visibility may come first. If a strong offer needs more reach, ads may help. If customers visit once and disappear, follow-up matters. We start with the business problem, then choose the marketing.</p>
           <div style={{display:'flex', gap:12, flexWrap:'wrap'}}>
             <Link href="/pricing" className="button button-cream">See pricing <span>↗</span></Link>
-            <Link href="/start" className="button button-cream">Tell us what needs help <span>↗</span></Link>
+            <Link href="#contact" className="button button-cream">Tell us what needs help <span>↗</span></Link>
           </div>
         </section>
+        <LeadForm eyebrow="Need help choosing?" heading="Tell us the problem. We will suggest the service." />
       </main>
     </>
   );
