@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   creator: "No Quiet Nights",
   publisher: "No Quiet Nights",
   category: "Hospitality Marketing",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+  },
   formatDetection: {
     email: false,
     address: false,
