@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getService, services } from "../service-data";
 import ServiceHeader from "../service-header";
 
-const siteUrl = "https://no-quiet-nights.vercel.app";
+const siteUrl = "https://www.noquietnights.co.uk";
 const seo: Record<string, { title: string; description: string; h1: string }> = {
   "social-media-management": { title: "Hospitality Social Media Management UK", description: "Social media management for UK restaurants, pubs and bars. Plan content around offers, events, launches, local customers and measurable venue demand.", h1: "Hospitality social media management that gives people a reason to visit." },
   "paid-ads": { title: "Hospitality PPC Agency UK | Google & Meta Ads", description: "Google Ads and Meta advertising for UK restaurants, pubs and bars, built around bookings, events, private hire, launches and measurable local demand.", h1: "Hospitality PPC and paid social built around bookings, footfall and demand." },
@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h1>{target.h1}</h1>
             <strong>{service.promise}</strong>
             <p>{service.intro}</p>
-            <div className="service-hero-actions"><Link href={`/start?service=${service.slug}`} className="button button-signal">Talk to us about {service.eyebrow.toLowerCase()} <span>↗</span></Link><Link href="/pricing" className="text-link">See hospitality marketing pricing →</Link></div>
+            <div className="service-hero-actions"><Link href="/contact" className="button button-signal">Talk to us about {service.eyebrow.toLowerCase()} <span>↗</span></Link><Link href="/pricing" className="text-link">See hospitality marketing pricing →</Link></div>
           </div>
           <figure className="service-detail-image"><img src={service.image} alt={service.imageAlt} /><figcaption>Hospitality marketing creative for restaurants, pubs and bars.</figcaption></figure>
         </section>
@@ -94,7 +94,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="service-proof section-pad"><div className="service-section-head"><p className="eyebrow">How we measure it</p><h2>Know what your<br/><em>marketing is doing.</em></h2><p>Measurement follows the commercial job, from search visibility and qualified traffic to enquiries, bookings, customer-list growth and repeat visits.</p></div><div className="proof-grid">{service.proof.map(item=><article key={item.label}><span>We track</span><h3>{item.label}</h3><p>{item.text}</p></article>)}</div></section>
         <section className="service-fit section-pad"><p className="eyebrow light">This is useful if</p><h2>When this hospitality marketing service makes sense</h2><ul>{service.bestFor.map(item=><li key={item}><span>✓</span>{item}</li>)}</ul></section>
         {guides.length > 0 && <section className="service-outcomes section-pad"><p className="eyebrow">Buyer guides</p><h2>Research the cost and channel<br/><em>before you commit.</em></h2><div className="outcome-grid">{guides.map((guide,index)=><article key={guide.href}><span>{String(index+1).padStart(2,"0")}</span><h3><Link href={guide.href}>{guide.label} →</Link></h3></article>)}</div></section>}
-        <section className="service-next section-pad"><p className="eyebrow">Need more than one service?</p><h2>Connect it into the<br/><em>whole marketing picture.</em></h2><p>We can combine local visibility, social media, paid demand, customer capture and repeat-customer marketing into one joined-up plan.</p><div><Link href="/pricing#monthly" className="button button-ink">Compare monthly plans <span>↗</span></Link><Link href="/services" className="text-link">Explore all hospitality marketing services →</Link></div></section>
+        <section className="service-next section-pad"><p className="eyebrow">Need more than one service?</p><h2>Connect it into the<br/><em>whole marketing picture.</em></h2><p>We can combine local visibility, social media, paid demand, customer capture and repeat-customer marketing into one joined-up plan.</p><div><Link href="/pricing#monthly" className="button button-ink">Compare monthly plans <span>↗</span></Link><Link href="/contact" className="text-link">Tell us what needs help →</Link></div></section>
       </main>
     </>
   );
