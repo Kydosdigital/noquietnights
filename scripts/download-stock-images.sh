@@ -49,23 +49,52 @@ for item in "${items[@]}"; do
   filename="${item%%|*}"
   id="${item#*|}"
   out="$DEST/$filename"
-  url="https://unsplash.com/photos/$id/download?force=true&w=1800"
-  echo "Downloading $filename"
-  if curl -A "Mozilla/5.0" -L --fail --retry 4 --retry-delay 2 --connect-timeout 20 --max-time 120 "$url" -o "$out"; then
-    mime="$(file --brief --mime-type "$out" || true)"
-    size="$(stat -c%s "$out" || echo 0)"
-    if [[ "$mime" == image/* && "$size" -gt 10000 ]]; then
-      echo "  OK: $mime, $size bytes"
-      ok=$((ok+1))
+  page_url="https://unsplash.com/photos/$id"
+  echo "Resolving $filename"
+  html="$(mktemp)"
+  if curl -A "Mozilla/5.0" -L --fail --retry 3 --retry-delay 2 --connect-timeout 20 --max-time 60 "$page_url" -o "$html"; then
+    image_url="$(python3 - "$html" <<'PY'
+import html, re, sys
+text = open(sys.argv[1], encoding="utf-8", errors="ignore").read()
+patterns = [
+    r'<meta[^>]+property=["\x27]og:image["\x27][^>]+content=["\x27]([^"\x27]+)',
+    r'<meta[^>]+content=["\x27]([^"\x27]+)["\x27][^>]+property=["\x27]og:image["\x27]',
+    r'<meta[^>]+name=["\x27]twitter:image["\x27][^>]+content=["\x27]([^"\x27]+)',
+]
+for pattern in patterns:
+    m = re.search(pattern, text, re.I)
+    if m:
+        print(html.unescape(m.group(1)))
+        break
+PY
+)"
+    rm -f "$html"
+    if [[ -n "$image_url" ]]; then
+      echo "Downloading $filename"
+      if curl -A "Mozilla/5.0" -L --fail --retry 4 --retry-delay 2 --connect-timeout 20 --max-time 120 "$image_url" -o "$out"; then
+        mime="$(file --brief --mime-type "$out" || true)"
+        size="$(stat -c%s "$out" || echo 0)"
+        if [[ "$mime" == image/* && "$size" -gt 10000 ]]; then
+          echo "  OK: $mime, $size bytes"
+          ok=$((ok+1))
+        else
+          echo "  INVALID: $mime, $size bytes"
+          rm -f "$out"
+          echo "$filename|$id|invalid:$mime:$size" >> "$FAILS"
+        fi
+      else
+        echo "  IMAGE DOWNLOAD FAILED"
+        rm -f "$out"
+        echo "$filename|$id|image_download_failed" >> "$FAILS"
+      fi
     else
-      echo "  INVALID: $mime, $size bytes"
-      rm -f "$out"
-      echo "$filename|$id|invalid:$mime:$size" >> "$FAILS"
+      echo "  IMAGE URL NOT FOUND"
+      echo "$filename|$id|image_url_not_found" >> "$FAILS"
     fi
   else
-    echo "  FAILED"
-    rm -f "$out"
-    echo "$filename|$id|download_failed" >> "$FAILS"
+    rm -f "$html"
+    echo "  PAGE FETCH FAILED"
+    echo "$filename|$id|page_fetch_failed" >> "$FAILS"
   fi
 done
 
