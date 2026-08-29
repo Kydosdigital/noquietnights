@@ -47,7 +47,7 @@ const plans = [
 function Header() {
   return <header className="site-header">
     <a className="site-logo" href="/" aria-label="No Quiet Nights"><span className="brand-mark"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></span></a>
-    <nav className="desktop-nav"><a href="/services">Services</a><a href="#monthly">Plans</a><a href="/team">Team</a></nav>
+    <nav className="desktop-nav"><a href="/services">Services</a><a href="#monthly">Plans</a><a href="/team">Team</a><a href="/reviews">Reviews</a></nav>
     <a className="nav-cta" href="/start">Start a project <span>↗</span></a>
   </header>;
 }
