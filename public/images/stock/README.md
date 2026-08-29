@@ -2,50 +2,55 @@
 
 Folder: `public/images/stock/`
 
-These images were sourced for the No Quiet Nights website from Unsplash pages presented as free to use under the Unsplash License at the time of sourcing. Keep this manifest with the assets so the original source can always be traced.
+These photos were sourced from Pexels and were marked **Free to use** on their individual source pages when selected for the No Quiet Nights website. Pexels permits free commercial website use under the Pexels licence. Keep this manifest with the local assets so the source of every image remains traceable.
 
-| File | Unsplash photo ID | Source |
-|---|---|---|
-| restaurant-01-busy-candlelit-dining.jpg | TlScs8TkNG4 | https://unsplash.com/photos/TlScs8TkNG4 |
-| restaurant-02-elegant-warm-interior.jpg | Ph7Y42lXzyw | https://unsplash.com/photos/Ph7Y42lXzyw |
-| restaurant-03-warm-tables-chairs.jpg | Pgu0wF6EOOE | https://unsplash.com/photos/Pgu0wF6EOOE |
-| restaurant-04-private-dining-guests.jpg | -DHh8TBJ8YI | https://unsplash.com/photos/-DHh8TBJ8YI |
-| restaurant-05-intimate-table-lamp.jpg | mLPNw6L5t5o | https://unsplash.com/photos/mLPNw6L5t5o |
-| restaurant-06-alley-warm-lighting.jpg | nsKPOIqaGbQ | https://unsplash.com/photos/nsKPOIqaGbQ |
-| restaurant-07-friends-candlelit-dinner.jpg | UEjjO-aJtZ8 | https://unsplash.com/photos/UEjjO-aJtZ8 |
-| restaurant-08-entrance-at-night.jpg | QVFBrb1kqC0 | https://unsplash.com/photos/QVFBrb1kqC0 |
-| restaurant-09-modern-interior.jpg | j0dAs1yodko | https://unsplash.com/photos/j0dAs1yodko |
-| chef-10-plating-professional-kitchen.jpg | bXOHW6fKdPI | https://unsplash.com/photos/bXOHW6fKdPI |
-| chef-11-plating-moody-kitchen.jpg | bhoHDqroF14 | https://unsplash.com/photos/bhoHDqroF14 |
-| chef-12-team-working-kitchen.jpg | sQg28nQnCTA | https://unsplash.com/photos/sQg28nQnCTA |
-| chef-13-garnishing-gourmet-dish.jpg | W2tx3M56gJw | https://unsplash.com/photos/W2tx3M56gJw |
-| chef-14-presenting-plated-dish.jpg | QuFOw-TjqGU | https://unsplash.com/photos/QuFOw-TjqGU |
-| chef-15-preparing-food.jpg | NDvpHUAHkqg | https://unsplash.com/photos/NDvpHUAHkqg |
-| chef-16-kitchen-team-at-work.jpg | Y_tMFA6KCcI | https://unsplash.com/photos/Y_tMFA6KCcI |
-| bar-17-bartender-preparing-cocktail.jpg | ZSndlbC6ivY | https://unsplash.com/photos/ZSndlbC6ivY |
-| bar-18-bartender-drink-with-ice.jpg | hG0tpL0vR0M | https://unsplash.com/photos/hG0tpL0vR0M |
-| bar-19-bartender-pouring-mint-cocktail.jpg | dfae7jtxCM8 | https://unsplash.com/photos/dfae7jtxCM8 |
-| bar-20-bartender-behind-counter.jpg | Dl9S7ok1cpU | https://unsplash.com/photos/Dl9S7ok1cpU |
-| bar-21-woman-bartender-making-drink.jpg | g-fXnd_sUPU | https://unsplash.com/photos/g-fXnd_sUPU |
-| guests-22-cocktails-and-snacks.jpg | hJqfore3SH4 | https://unsplash.com/photos/hJqfore3SH4 |
-| guests-23-toasting-cocktails.jpg | JHezbrzFErw | https://unsplash.com/photos/JHezbrzFErw |
-| pub-24-friends-with-drinks.jpg | jnn09Qi2-oM | https://unsplash.com/photos/jnn09Qi2-oM |
-| pub-25-dimly-lit-table.jpg | 0GRA5JfKdrU | https://unsplash.com/photos/0GRA5JfKdrU |
-| guests-26-party-friends-drinks.jpg | UMbzEJ3FgMg | https://unsplash.com/photos/UMbzEJ3FgMg |
-| pub-27-row-of-beer-taps.jpg | rfOFRwKHtJM | https://unsplash.com/photos/rfOFRwKHtJM |
-| pub-28-modern-beer-taps.jpg | KMWd5kYTbww | https://unsplash.com/photos/KMWd5kYTbww |
-| pub-29-chrome-beer-taps.jpg | jCbSVZU5DZs | https://unsplash.com/photos/jCbSVZU5DZs |
-| drink-30-whisky-sour-london.jpg | nP2YtFPGIA0 | https://unsplash.com/photos/nP2YtFPGIA0 |
-| drink-31-moody-cocktail-closeup.jpg | PLrZt6bdMZM | https://unsplash.com/photos/PLrZt6bdMZM |
-| drink-32-yellow-citrus-cocktail.jpg | u1Bq-w53CSw | https://unsplash.com/photos/u1Bq-w53CSw |
-| drink-33-rooftop-bar-cocktail.jpg | Hs_h11UX858 | https://unsplash.com/photos/Hs_h11UX858 |
-| drink-34-margarita-closeup.jpg | ZLwCnH2RpX4 | https://unsplash.com/photos/ZLwCnH2RpX4 |
-| drink-35-polished-cocktail-table.jpg | l6SqMfEaje4 | https://unsplash.com/photos/l6SqMfEaje4 |
+| File | Pexels ID | Source |
+|---|---:|---|
+| restaurant-01-warm-dining-table.jpg | 35833832 | https://www.pexels.com/photo/35833832/ |
+| restaurant-02-romantic-warm-dining.jpg | 36353801 | https://www.pexels.com/photo/36353801/ |
+| restaurant-03-modern-people-dining.jpg | 7955383 | https://www.pexels.com/photo/7955383/ |
+| restaurant-04-elegant-golden-interior.jpg | 33327452 | https://www.pexels.com/photo/33327452/ |
+| restaurant-05-cozy-modern-interior.jpg | 34617282 | https://www.pexels.com/photo/34617282/ |
+| restaurant-06-warm-modern-decor.jpg | 36358765 | https://www.pexels.com/photo/36358765/ |
+| restaurant-07-elegant-ambient-interior.jpg | 34631030 | https://www.pexels.com/photo/34631030/ |
+| restaurant-08-private-dining-interior.jpg | 29707937 | https://www.pexels.com/photo/29707937/ |
+| restaurant-09-warm-hanging-lights.jpg | 776538 | https://www.pexels.com/photo/776538/ |
+| restaurant-10-modern-greenery-dining.jpg | 34312942 | https://www.pexels.com/photo/34312942/ |
+| restaurant-11-london-red-lit-interior.jpg | 18756798 | https://www.pexels.com/photo/18756798/ |
+| restaurant-12-table-setting-menu.jpg | 32188258 | https://www.pexels.com/photo/32188258/ |
+| bar-13-citrus-cocktail-mixing.jpg | 31285168 | https://www.pexels.com/photo/31285168/ |
+| bar-14-bartender-vibrant-bar.jpg | 6174003 | https://www.pexels.com/photo/6174003/ |
+| bar-15-bartender-serving-customer.jpg | 6174019 | https://www.pexels.com/photo/6174019/ |
+| bar-16-bartender-guests-counter.jpg | 37594394 | https://www.pexels.com/photo/37594394/ |
+| bar-17-bartender-holding-cocktail.jpg | 4485375 | https://www.pexels.com/photo/4485375/ |
+| bar-18-bartender-mixing-glass.jpg | 6284889 | https://www.pexels.com/photo/6284889/ |
+| bar-19-stylish-bartender-event.jpg | 19674060 | https://www.pexels.com/photo/19674060/ |
+| bar-20-cocktails-and-appetizers.jpg | 30641906 | https://www.pexels.com/photo/30641906/ |
+| bar-21-cocktail-bar-greenery.jpg | 15325595 | https://www.pexels.com/photo/15325595/ |
+| bar-22-garnishing-upscale-cocktail.jpg | 16807988 | https://www.pexels.com/photo/16807988/ |
+| bar-23-barman-pouring-cocktails.jpg | 19674062 | https://www.pexels.com/photo/19674062/ |
+| chef-24-team-plating-kitchen.jpg | 15671416 | https://www.pexels.com/photo/15671416/ |
+| chef-25-gourmet-plating-warm-light.jpg | 36630804 | https://www.pexels.com/photo/36630804/ |
+| chef-26-plating-modern-kitchen.jpg | 36430087 | https://www.pexels.com/photo/36430087/ |
+| chef-27-preparing-dish-kitchen.jpg | 36430076 | https://www.pexels.com/photo/36430076/ |
+| chef-28-precise-plating.jpg | 32069867 | https://www.pexels.com/photo/32069867/ |
+| chef-29-presenting-dish.jpg | 36430028 | https://www.pexels.com/photo/36430028/ |
+| chef-30-man-plating-food.jpg | 3933217 | https://www.pexels.com/photo/3933217/ |
+| chef-31-artful-plating.jpg | 36430075 | https://www.pexels.com/photo/36430075/ |
+| chef-32-gourmet-dish-plating.jpg | 36430089 | https://www.pexels.com/photo/36430089/ |
+| chef-33-friendly-chef-preparing.jpg | 39025943 | https://www.pexels.com/photo/39025943/ |
+| chef-34-expert-gourmet-plating.jpg | 36430090 | https://www.pexels.com/photo/36430090/ |
+| chef-35-busy-kitchen-pass.jpg | 32640120 | https://www.pexels.com/photo/32640120/ |
 
-## Usage
+## Site usage
 
-Use the local asset path in the site, for example:
+Reference the files locally, for example:
 
-`/images/stock/restaurant-01-busy-candlelit-dining.jpg`
+`/images/stock/restaurant-01-warm-dining-table.jpg`
 
-Avoid presenting identifiable people as endorsing No Quiet Nights, and avoid implying an image depicts a real No Quiet Nights client unless it actually does.
+The library is deliberately grouped by filename prefix:
+- `restaurant-`: interiors, tables and dining atmosphere
+- `bar-`: bartenders, cocktails and nightlife
+- `chef-`: kitchens, plating and food preparation
+
+Do not imply that identifiable people pictured are No Quiet Nights employees, customers or endorsers. Do not describe a stock-photo venue as an actual No Quiet Nights client.
