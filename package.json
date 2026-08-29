@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": "22.x"
   },
   "scripts": {
+    "predev": "node scripts/migrate-site-domain.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/migrate-site-domain.mjs",
     "build": "next build",
     "start": "next start"
   },

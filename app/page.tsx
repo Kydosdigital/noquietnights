@@ -1,18 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Hospitality marketing for restaurants, pubs and bars | NO QUIET NIGHTS",
-  description: "We help restaurants, pubs and bars get found, bring in more customers and give them reasons to come back through social media, Google, ads, content and customer follow-up."
+export const metadata: Metadata = {
+  title: "Hospitality Marketing Agency UK",
+  description: "UK hospitality marketing agency for restaurants, pubs and bars. Get found on Google, stay visible on social media, run ads and bring customers back.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Hospitality Marketing Agency UK | No Quiet Nights",
+    description: "Hospitality marketing for UK restaurants, pubs and bars, built around getting found, getting chosen and bringing customers back.",
+    url: "/",
+    type: "website",
+  },
+};
+
+const siteUrl = "https://www.noquietnights.co.uk";
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Hospitality Marketing Agency Services",
+  serviceType: "Hospitality marketing",
+  provider: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "No Quiet Nights" },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  audience: { "@type": "Audience", audienceType: "Restaurants, pubs, bars and hospitality operators" },
+  url: siteUrl,
 };
 
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <header className="site-header">
         <Link className="site-logo" href="/" aria-label="No Quiet Nights">
           <span className="brand-mark"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></span>
         </Link>
-        <nav className="desktop-nav">
+        <nav className="desktop-nav" aria-label="Main navigation">
           <Link href="/services">Services</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/team">Team</Link>
@@ -24,7 +45,7 @@ export default function Home() {
 
       <main>
         <section className="pricing-hero page-top">
-          <p className="eyebrow">Hospitality marketing</p>
+          <p className="eyebrow">UK hospitality marketing agency</p>
           <h1>Restaurants shouldn't have<br/><em>quiet nights.</em></h1>
           <div className="pricing-hero-aside">
             <p>We help restaurants, pubs and bars get found, bring in more customers and give them reasons to come back.</p>
@@ -34,6 +55,15 @@ export default function Home() {
             </div>
           </div>
           <div className="price-promise"><b>ONE</b><span>hospitality<br/>marketing team</span><i>SOCIAL · GOOGLE<br/>ADS · FOLLOW-UP</i></div>
+        </section>
+
+        <section className="plan-selector section-pad">
+          <div className="selector-head"><p className="eyebrow">Who we work with</p><h2>Hospitality is not<br/><em>one-size-fits-all.</em></h2></div>
+          <div className="selector-list">
+            <Link href="/restaurants"><span>Get found, win more bookings and give diners reasons to return.</span><b>Restaurants</b><i>↗</i></Link>
+            <Link href="/pubs-bars"><span>Build demand around quieter nights, food, events and private hire.</span><b>Pubs + bars</b><i>↗</i></Link>
+            <Link href="/drinks-brands"><span>Help more people notice the product, try it, find it and buy it again.</span><b>Drinks brands</b><i>↗</i></Link>
+          </div>
         </section>
 
         <section className="plan-selector section-pad">
@@ -53,7 +83,10 @@ export default function Home() {
           <p className="eyebrow">The big idea</p>
           <h2>Get found. Get chosen.<br/><em>Bring them back.</em></h2>
           <p>Good hospitality marketing should do more than keep your Instagram busy. It should help people discover you, decide to visit, book more easily and come back again.</p>
-          <Link href="/pricing" className="button button-signal">See our monthly plans <span>↗</span></Link>
+          <div style={{display:'flex', gap:12, flexWrap:'wrap'}}>
+            <Link href="/about" className="button button-signal">About No Quiet Nights <span>↗</span></Link>
+            <Link href="/work" className="button button-signal">How we measure the work <span>↗</span></Link>
+          </div>
         </section>
 
         <section className="pricing-final">
