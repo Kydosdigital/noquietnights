@@ -15,6 +15,36 @@ const seo: Record<string, { title: string; description: string; h1: string }> = 
   "launch-growth-strategy": { title: "Hospitality Marketing Strategy UK | Launch & Growth", description: "Hospitality marketing strategy for UK restaurant and bar launches, quiet periods and growth plans across SEO, content, paid media, CRM and offers.", h1: "Hospitality marketing strategy for launches, quiet periods and growth." },
 };
 
+const relatedGuides: Record<string, { label: string; href: string }[]> = {
+  "social-media-management": [
+    { label: "Restaurant social media management cost UK", href: "/insights/restaurant-social-media-management-cost-uk" },
+    { label: "Pub social media management cost UK", href: "/insights/pub-social-media-management-cost-uk" },
+    { label: "Drinks brand social media management cost UK", href: "/insights/drinks-brand-social-media-management-cost-uk" },
+  ],
+  "paid-ads": [
+    { label: "Hospitality paid media management cost UK", href: "/insights/hospitality-paid-media-management-cost-uk" },
+    { label: "Hospitality SEO vs Google Ads", href: "/insights/hospitality-seo-vs-google-ads" },
+    { label: "Google Ads vs Meta Ads for restaurants", href: "/insights/google-ads-vs-meta-ads-restaurants" },
+  ],
+  "local-seo": [
+    { label: "Hospitality local SEO cost UK", href: "/insights/hospitality-local-seo-cost-uk" },
+    { label: "Restaurant SEO cost UK", href: "/insights/restaurant-seo-cost-uk" },
+    { label: "Pub SEO cost UK", href: "/insights/pub-seo-cost-uk" },
+  ],
+  "crm-repeat-customers": [
+    { label: "Hospitality email marketing and CRM cost UK", href: "/insights/hospitality-email-marketing-crm-cost-uk" },
+  ],
+  "website-conversion": [
+    { label: "Hospitality website cost UK", href: "/insights/hospitality-website-cost-uk" },
+    { label: "Drinks brand website cost UK", href: "/insights/drinks-brand-website-cost-uk" },
+  ],
+  "launch-growth-strategy": [
+    { label: "How much should a restaurant spend on marketing?", href: "/insights/how-much-should-restaurant-spend-on-marketing-uk" },
+    { label: "How much should a pub spend on marketing?", href: "/insights/how-much-should-pub-spend-marketing-uk" },
+    { label: "How much should you spend launching a drinks brand?", href: "/insights/how-much-should-you-spend-launching-a-drinks-brand-uk" },
+  ],
+};
+
 export function generateStaticParams() { return services.map((service) => ({ slug: service.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -35,6 +65,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = getService(slug);
   if (!service) notFound();
   const target = seo[slug] ?? { title: service.eyebrow, description: service.promise, h1: service.title };
+  const guides = relatedGuides[slug] ?? [];
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -62,6 +93,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="service-work section-pad"><div className="service-section-head"><p className="eyebrow light">What we do</p><h2>What {service.eyebrow.toLowerCase()}<br/><em>actually includes.</em></h2></div><div className="work-list">{service.work.map((item,index)=><article key={item.title}><span>{String(index+1).padStart(2,"0")}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></section>
         <section className="service-proof section-pad"><div className="service-section-head"><p className="eyebrow">How we measure it</p><h2>Know what your<br/><em>marketing is doing.</em></h2><p>Measurement follows the commercial job, from search visibility and qualified traffic to enquiries, bookings, customer-list growth and repeat visits.</p></div><div className="proof-grid">{service.proof.map(item=><article key={item.label}><span>We track</span><h3>{item.label}</h3><p>{item.text}</p></article>)}</div></section>
         <section className="service-fit section-pad"><p className="eyebrow light">This is useful if</p><h2>When this hospitality marketing service makes sense</h2><ul>{service.bestFor.map(item=><li key={item}><span>✓</span>{item}</li>)}</ul></section>
+        {guides.length > 0 && <section className="service-outcomes section-pad"><p className="eyebrow">Buyer guides</p><h2>Research the cost and channel<br/><em>before you commit.</em></h2><div className="outcome-grid">{guides.map((guide,index)=><article key={guide.href}><span>{String(index+1).padStart(2,"0")}</span><h3><Link href={guide.href}>{guide.label} →</Link></h3></article>)}</div></section>}
         <section className="service-next section-pad"><p className="eyebrow">Need more than one service?</p><h2>Connect it into the<br/><em>whole marketing picture.</em></h2><p>We can combine local visibility, social media, paid demand, customer capture and repeat-customer marketing into one joined-up plan.</p><div><Link href="/pricing#monthly" className="button button-ink">Compare monthly plans <span>↗</span></Link><Link href="/services" className="text-link">Explore all hospitality marketing services →</Link></div></section>
       </main>
     </>
