@@ -30,3 +30,40 @@
 @media(max-width:1050px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.team-hero{grid-template-columns:1fr;padding-top:130px;gap:35px}.team-hero .eyebrow{grid-column:auto}}
 @media(max-width:640px){.team-grid{grid-template-columns:1fr}.team-card-copy{padding:24px}.team-hero h1{font-size:clamp(4rem,18vw,6.4rem)}}
+
+
+.reviews-page{background:var(--paper);color:var(--ink)}
+.reviews-hero{padding-top:180px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:70px;align-items:end}
+.reviews-hero>.eyebrow{grid-column:1/-1}
+.reviews-hero h1{font-family:var(--condensed);font-size:clamp(4.8rem,9vw,10rem);font-weight:900;line-height:.8;letter-spacing:-.075em;text-transform:uppercase;margin:0}
+.reviews-hero h1 em{font-family:var(--serif);font-weight:400;text-transform:none;color:var(--signal)}
+.reviews-hero-copy{max-width:590px;padding-bottom:8px}
+.reviews-hero-copy>p:first-child{font-family:var(--serif);font-size:1.35rem;line-height:1.45;margin:0 0 22px}
+.reviews-intro-note{font-size:.82rem;line-height:1.5;color:#6b665b;border-left:3px solid var(--acid);padding-left:14px;margin:0}
+.reviews-band{background:var(--signal);color:var(--paper);overflow:hidden;border-top:1px solid rgba(17,16,14,.15);border-bottom:1px solid rgba(17,16,14,.15)}
+.reviews-band-inner{display:flex;align-items:center;gap:26px;white-space:nowrap;padding:15px 5vw;font-family:var(--condensed);font-weight:900;letter-spacing:.06em;font-size:clamp(1.3rem,2.2vw,2.1rem)}
+.reviews-band-inner i{font-style:normal;color:var(--acid)}
+.reviews-grid{background:var(--ink);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;padding-top:1px;padding-bottom:1px}
+.review-card{background:var(--paper);min-height:330px;padding:28px;display:flex;flex-direction:column}
+.review-card-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.review-card-top span{background:var(--acid);padding:7px 9px;font-size:.65rem;font-weight:800;letter-spacing:.08em}
+.review-card-top b{text-transform:uppercase;font-size:.7rem;letter-spacing:.1em;color:var(--signal)}
+.review-card blockquote{margin:45px 0 40px}
+.review-card blockquote p{font-family:var(--serif);font-size:1.55rem;line-height:1.18;margin:0;color:#7b756b}
+.review-card-meta{margin-top:auto;border-top:1px solid #cbc3b5;padding-top:16px;display:flex;flex-direction:column;gap:5px}
+.review-card-meta strong{font-size:.85rem}
+.review-card-meta small{font-size:.7rem;color:#777064;text-transform:uppercase;letter-spacing:.08em}
+.reviews-uk{background:var(--signal);color:var(--paper);display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.reviews-uk h2{font-family:var(--condensed);font-size:clamp(3.8rem,6vw,7rem);font-weight:900;letter-spacing:-.07em;line-height:.82;text-transform:uppercase;margin:0}
+.reviews-uk h2 em{font-family:var(--serif);font-weight:400;text-transform:none;color:var(--acid)}
+.reviews-city-cloud{display:flex;flex-wrap:wrap;align-content:flex-start;gap:10px}
+.reviews-city-cloud span{border:1px solid rgba(242,237,223,.55);padding:12px 15px;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:800}
+.reviews-proof{background:var(--paper)}
+.reviews-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cfc7b8;margin-top:40px}
+.reviews-proof-grid article{background:var(--paper);padding:32px;min-height:260px}
+.reviews-proof-grid span{display:inline-block;background:var(--signal);color:var(--paper);font-size:.64rem;font-weight:800;padding:7px 9px}
+.reviews-proof-grid h2{font-family:var(--serif);font-weight:400;font-size:1.7rem;line-height:1.1;margin:34px 0 18px}
+.reviews-proof-grid p{color:#625d53;line-height:1.55}
+@media(max-width:1000px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reviews-uk{grid-template-columns:1fr}}
+@media(max-width:900px){.reviews-hero{grid-template-columns:1fr;padding-top:130px;gap:35px}.reviews-hero>.eyebrow{grid-column:auto}.reviews-proof-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.reviews-grid{grid-template-columns:1fr}.review-card{min-height:280px}.reviews-hero h1{font-size:clamp(4rem,18vw,6.4rem)}}
