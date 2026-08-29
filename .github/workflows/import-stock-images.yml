@@ -1,0 +1,38 @@
+name: Import hospitality stock image library
+
+on:
+  push:
+    branches:
+      - assets/hospitality-stock-library
+    paths:
+      - scripts/download-stock-images.sh
+      - .github/workflows/import-stock-images.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Download approved free stock images
+        run: bash scripts/download-stock-images.sh
+
+      - name: Commit downloaded image library
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/stock
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+            exit 0
+          fi
+          git commit -m "assets: add hospitality stock image library [skip ci]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
