@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Start a Hospitality Marketing Project",
+  description:
+    "Tell No Quiet Nights what is underperforming in your restaurant, pub or bar and start a conversation about the right hospitality marketing solution.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 export default function StartPage() {
   return <main className="section-pad" style={{paddingTop:140}}>
     <p className="eyebrow">Start a project</p>

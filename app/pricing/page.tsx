@@ -1,3 +1,21 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hospitality Marketing Pricing from £165",
+  description:
+    "Compare transparent monthly hospitality marketing plans for UK restaurants, pubs and bars, including social media, local SEO, paid demand, CRM and repeat-customer growth.",
+  alternates: {
+    canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Hospitality Marketing Pricing from £165 | No Quiet Nights",
+    description:
+      "Four clear monthly hospitality marketing plans built around visibility, demand and repeat customers.",
+    url: "/pricing",
+    type: "website",
+  },
+};
+
 const plans = [
   {
     n: "01", name: "Starter", price: "165",
