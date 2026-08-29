@@ -34,7 +34,7 @@ const jsonLd = {
       dateModified: "2026-08-29",
       inLanguage: "en-GB",
       author: { "@type": "Organization", name: "NO QUIET NIGHTS", url: "https://no-quiet-nights.vercel.app" },
-      publisher: { "@type": "Organization", name: "NO QUIET NIGHTS", url: "https://no-quiet-nights.vercel.app" },
+      publisher: { "@type": "Organization", name: "NO QUIET NIGHTS", url: "https://no-quiet-nights.vercel.app", logo: { "@type": "ImageObject", url: "https://no-quiet-nights.vercel.app/brand/no-quiet-nights-logo.svg" } },
       mainEntityOfPage: "https://no-quiet-nights.vercel.app/insights/restaurant-marketing-agency-cost-uk",
       about: ["restaurant marketing", "restaurant marketing agency cost", "hospitality marketing", "restaurant marketing pricing"],
     },
@@ -55,7 +55,7 @@ const jsonLd = {
 
 function Header() {
   return <header className={styles.header}>
-    <a className={styles.logo} href="/pricing" aria-label="NO QUIET NIGHTS"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></a>
+    <a className={styles.logo} href="/" aria-label="NO QUIET NIGHTS home" />
     <nav className={styles.nav} aria-label="Main navigation"><a href="/pricing">Pricing</a><a href="#costs">Costs</a><a href="#faq">FAQ</a><a className={styles.cta} href="/start">Start a project ↗</a></nav>
   </header>;
 }
@@ -215,6 +215,6 @@ export default function ArticlePage() {
 
       <section className={styles.final}><p className={styles.eyebrow}>Your turn</p><h2>Where is trade softer than it should be?</h2><p>Bring us the quiet service, slow launch, underused room or disconnected marketing problem. We will point to the smallest sensible starting point.</p><a href="/start">Tell us the quiet bit ↗</a></section>
     </main>
-    <footer className={styles.footer}><span>NO QUIET NIGHTS</span><span>UK hospitality growth studio</span><span>Plans from £165/month</span></footer>
+    <footer className={styles.footer}><a className={styles.footerLogo} href="/" aria-label="NO QUIET NIGHTS home" /><span>UK hospitality growth studio</span><span>Plans from £165/month</span></footer>
   </div>;
 }
