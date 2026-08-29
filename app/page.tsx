@@ -15,6 +15,7 @@ export default function Home() {
         <nav className="desktop-nav">
           <Link href="/services">Services</Link>
           <Link href="/pricing">Pricing</Link>
+          <Link href="/team">Team</Link>
           <Link href="/insights">Insights</Link>
         </nav>
         <Link className="nav-cta" href="/start">Start a project <span>↗</span></Link>
