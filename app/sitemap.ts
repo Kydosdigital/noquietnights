@@ -4,41 +4,13 @@ const siteUrl = "https://no-quiet-nights.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: `${siteUrl}/pricing`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/restaurants`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/pubs-bars`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/drinks-brands`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/about`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/work`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/insights`,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+    { url: `${siteUrl}/pricing`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/about`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${siteUrl}/restaurants`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/pubs-bars`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/drinks-brands`, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${siteUrl}/work`, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/insights`, changeFrequency: "weekly", priority: 0.8 },
     {
       url: `${siteUrl}/insights/restaurant-marketing-agency-cost-uk`,
       lastModified: new Date("2026-08-29"),
