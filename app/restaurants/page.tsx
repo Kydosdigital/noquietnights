@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LeadForm from "../components/lead-form";
 import ServiceHeader from "../services/service-header";
 
 const siteUrl = "https://www.noquietnights.co.uk";
@@ -42,7 +43,7 @@ export default function RestaurantsPage() {
           <p className="eyebrow">Restaurant marketing agency UK</p>
           <h1>Restaurant marketing that helps fill <em>quieter services.</em></h1>
           <p>We help restaurants get found, win more bookings and give diners reasons to come back. That can mean Google, social media, ads, website improvements or customer follow-up, depending on where you need help.</p>
-          <div><Link className="button button-ink" href="/start?type=restaurant">Talk about my restaurant <span>↗</span></Link><Link className="text-link" href="/pricing">See pricing →</Link></div>
+          <div><Link className="button button-ink" href="#contact">Talk about my restaurant <span>↗</span></Link><Link className="text-link" href="/pricing">See pricing →</Link></div>
         </div>
       </section>
 
@@ -77,8 +78,8 @@ export default function RestaurantsPage() {
       </section>
 
       <section className="section-pad"><p className="eyebrow">Frequently asked questions</p><h2>Restaurant marketing FAQs</h2>{faqs.map(([q,a]) => <article key={q}><h3>{q}</h3><p>{a}</p></article>)}</section>
-
-      <section className="restaurant-final"><span>Next step</span><h2>Which part of the week<br/>needs to be <em>fuller?</em></h2><p>Tell us the problem. We will tell you where we would start.</p><Link className="button button-cream" href="/start?type=restaurant">Find my starting point <span>↗</span></Link></section>
+      <LeadForm eyebrow="Restaurant enquiry" heading="Which service, sitting or revenue line needs help?" />
+      <section className="restaurant-final"><span>Next step</span><h2>Which part of the week<br/>needs to be <em>fuller?</em></h2><p>Tell us the problem. We will tell you where we would start.</p><Link className="button button-cream" href="#contact">Find my starting point <span>↗</span></Link></section>
     </main>
   </>;
 }
