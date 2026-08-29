@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://no-quiet-nights.vercel.app";
+const siteUrl = "https://www.noquietnights.co.uk";
 
 export default function robots(): MetadataRoute.Robots {
   const isProduction = process.env.VERCEL_ENV === "production";
