@@ -9,10 +9,10 @@ These photos were sourced from Pexels and were marked **Free to use** on their i
 | restaurant-01-warm-dining-table.jpg | 35833832 | https://www.pexels.com/photo/35833832/ |
 | restaurant-02-romantic-warm-dining.jpg | 36353801 | https://www.pexels.com/photo/36353801/ |
 | restaurant-03-modern-people-dining.jpg | 7955383 | https://www.pexels.com/photo/7955383/ |
-| restaurant-04-elegant-golden-interior.jpg | 33327452 | https://www.pexels.com/photo/33327452/ |
-| restaurant-05-cozy-modern-interior.jpg | 34617282 | https://www.pexels.com/photo/34617282/ |
+| restaurant-04-elegant-golden-interior.jpg | 14590691 | https://www.pexels.com/photo/14590691/ |
+| restaurant-05-cozy-modern-interior.jpg | 15297133 | https://www.pexels.com/photo/15297133/ |
 | restaurant-06-warm-modern-decor.jpg | 36358765 | https://www.pexels.com/photo/36358765/ |
-| restaurant-07-elegant-ambient-interior.jpg | 34631030 | https://www.pexels.com/photo/34631030/ |
+| restaurant-07-elegant-ambient-interior.jpg | 19039292 | https://www.pexels.com/photo/19039292/ |
 | restaurant-08-private-dining-interior.jpg | 29707937 | https://www.pexels.com/photo/29707937/ |
 | restaurant-09-warm-hanging-lights.jpg | 776538 | https://www.pexels.com/photo/776538/ |
 | restaurant-10-modern-greenery-dining.jpg | 34312942 | https://www.pexels.com/photo/34312942/ |
