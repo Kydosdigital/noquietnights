@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactEmailDisplay, contactEmailHref } from "../components/lead-form";
 
 export default function ServiceHeader() {
   return (
@@ -15,8 +16,12 @@ export default function ServiceHeader() {
         <Link href="/pricing">Pricing</Link>
         <Link href="/insights">Insights</Link>
         <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
-      <Link className="nav-cta" href="/start">Start a project <span>↗</span></Link>
+      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        <a href={contactEmailHref} aria-label={`Email ${contactEmailDisplay}`}>{contactEmailDisplay}</a>
+        <Link className="nav-cta" href="/contact">Start a project <span>↗</span></Link>
+      </div>
     </header>
   );
 }
