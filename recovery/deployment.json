@@ -1,0 +1,66 @@
+{
+  "recoveredAt": "2026-08-29",
+  "recoveryType": "rendered production recovery",
+  "originalSourceRecovered": false,
+  "project": {
+    "id": "prj_a6cfansNrJmEBJO0CpZkHNTlWSOl",
+    "name": "no-quiet-nights",
+    "framework": "nextjs"
+  },
+  "production": {
+    "deploymentId": "dpl_DqAfb8pCHRXy9SnYwskSq7sjuk1M",
+    "url": "no-quiet-nights-lyc183gjt-kydosdigitals-projects.vercel.app",
+    "alias": "no-quiet-nights.vercel.app",
+    "readyState": "READY",
+    "target": "production"
+  },
+  "originalDeployment": {
+    "deploymentId": "dpl_GpJ67vGeNM6FuqYa9YzCWHWrGgxu",
+    "source": "cli",
+    "actor": "codex"
+  },
+  "build": {
+    "nextjs": "16.2.6",
+    "bundler": "turbopack",
+    "extractedDeploymentFileCount": 41
+  },
+  "renderedRoutes": [
+    "/",
+    "/about",
+    "/credits",
+    "/drinks-brands",
+    "/pricing",
+    "/privacy",
+    "/pubs-bars",
+    "/restaurants",
+    "/services",
+    "/start",
+    "/work",
+    "/robots.txt",
+    "/sitemap.xml"
+  ],
+  "recoveredStaticAssets": [
+    "/_next/static/chunks/02g3221oh~3le.js",
+    "/_next/static/chunks/03~yq9q893hmn.js",
+    "/_next/static/chunks/05tsy9pxtuyv0.js",
+    "/_next/static/chunks/0d3shmwh5_nmn.js",
+    "/_next/static/chunks/0eay0~-68.o85.css",
+    "/_next/static/chunks/0pqt~8bl3ukh4.js",
+    "/_next/static/chunks/0qfngm7z_ebik.js",
+    "/_next/static/chunks/0s89ejoluli8t.js",
+    "/_next/static/chunks/0u9ziu_0v2-xl.js",
+    "/_next/static/chunks/10u3y4bw1ayzs.js",
+    "/_next/static/chunks/12ea2p.0zry1p.js",
+    "/_next/static/chunks/16joj-w8x5b8c.js",
+    "/_next/static/chunks/turbopack-0unxs85h.9_2d.js"
+  ],
+  "binaryImageAssets": [
+    "https://no-quiet-nights.vercel.app/images/chef-pass.jpg",
+    "https://no-quiet-nights.vercel.app/images/cocktail.jpg",
+    "https://no-quiet-nights.vercel.app/images/food-detail.jpg",
+    "https://no-quiet-nights.vercel.app/images/guests-table.jpg",
+    "https://no-quiet-nights.vercel.app/images/hero-service.jpg",
+    "https://no-quiet-nights.vercel.app/images/pub-atmosphere.jpg",
+    "https://no-quiet-nights.vercel.app/images/team-service.jpg"
+  ]
+}
