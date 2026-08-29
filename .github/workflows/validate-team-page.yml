@@ -1,0 +1,26 @@
+name: Validate team page
+
+on:
+  push:
+    branches:
+      - site/team-page
+    paths:
+      - app/team/**
+      - app/overrides.css
+      - app/page.tsx
+      - app/services/service-header.tsx
+      - app/pricing/page.tsx
+      - public/images/team/**
+      - .github/workflows/validate-team-page.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
