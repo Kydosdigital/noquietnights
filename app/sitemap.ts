@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services } from "./services/service-data";
 
-const siteUrl = "https://no-quiet-nights.vercel.app";
+const siteUrl = "https://www.noquietnights.co.uk";
 
 const insightSlugs = [
   "bar-marketing-agency-cost-uk",
