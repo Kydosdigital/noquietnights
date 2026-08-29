@@ -49,7 +49,7 @@ const plans = [
 
 function Header() {
   return <header className="site-header">
-    <a className="site-logo" href="/pricing" aria-label="No Quiet Nights"><span className="brand-mark"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></span></a>
+    <a className="site-logo" href="/" aria-label="No Quiet Nights home"><span className="brand-mark" aria-hidden="true" /></a>
     <nav className="desktop-nav"><a href="#monthly">Plans</a><a href="#content-team">Content team</a><a href="#playbook">Free guide</a></nav>
     <a className="nav-cta" href="/start">Start a project <span>↗</span></a>
   </header>;
