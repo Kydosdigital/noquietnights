@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ServiceHeader from "../services/service-header";
+
+const siteUrl = "https://no-quiet-nights.vercel.app";
+
+export const metadata: Metadata = {
+  title: "Hospitality Marketing Results & Measurement | No Quiet Nights",
+  description: "See how No Quiet Nights approaches hospitality marketing proof, baselines and measurement across restaurants, pubs, bars and drinks brands without invented case-study claims.",
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Hospitality Marketing Results & Measurement | No Quiet Nights",
+    description: "Commercial proof needs a baseline, a defined intervention, a fair comparison period and a real source.",
+    url: "/work",
+    type: "website",
+  },
+};
+
+const schema = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Hospitality Marketing Results and Measurement", url: `${siteUrl}/work`, description: "How No Quiet Nights measures hospitality marketing work and publishes verified proof." };
+
+export default function WorkPage() {
+  return <>
+    <ServiceHeader />
+    <main id="main-content">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <section className="work-hero page-top"><p className="eyebrow light">Hospitality marketing results</p><h1>Proof should survive the <em>monthly meeting.</em></h1><p>We do not publish invented client wins. Until a real case is verified and approved, this page shows the measurement standard we use: a commercial problem, a baseline, a defined intervention, a fair period and a source behind every claim.</p><Link className="button button-cream" href="/start">Bring us a measurable brief <span>↗</span></Link></section>
+      <section className="proof-ledger section-pad"><div className="proof-ledger-head"><p className="eyebrow">The evidence standard</p><h2>Every number<br/>needs a <em>receipt.</em></h2><p>Hospitality marketing results only mean something when the context is visible.</p></div><div className="proof-requirements"><article><span>01</span><h3>Pressure point</h3><p>The service, audience or revenue line that needed movement.</p></article><article><span>02</span><h3>Baseline</h3><p>What was happening before the work began.</p></article><article><span>03</span><h3>Intervention</h3><p>The SEO, ads, content, CRM or journey we changed.</p></article><article><span>04</span><h3>Period</h3><p>A start, finish and fair comparison window.</p></article><article><span>05</span><h3>Outcome</h3><p>Booking, enquiry, footfall, customer or demand movement.</p></article><article><span>06</span><h3>Source</h3><p>The system or dataset behind the claim.</p></article></div></section>
+      <section className="metric-wall"><div className="metric-wall-title"><p className="eyebrow light">What we measure</p><h2>Different brief.<br/><em>Different truth.</em></h2></div><article><span>RESTAURANTS</span><h3>Target-service demand</h3><p>Local search · direct bookings · covers · private dining · repeat visits</p></article><article><span>PUBS + BARS</span><h3>Session performance</h3><p>Food covers · events · private hire · footfall signals · repeat attendance</p></article><article><span>DRINKS BRANDS</span><h3>Qualified demand</h3><p>Trade enquiries · stockist journeys · trial actions · paid efficiency · repeat purchase where data exists</p></article></section>
+      <section className="plan-selector section-pad"><div className="selector-head"><p className="eyebrow">How the work connects</p><h2>Start with the commercial objective.<br/><em>Then choose the channel.</em></h2></div><div className="selector-list"><Link href="/services/local-seo"><span>Measure search visibility, Maps activity, qualified organic traffic and the actions local discovery creates.</span><b>Local SEO measurement</b><i>↗</i></Link><Link href="/services/paid-ads"><span>Measure spend, search terms, clicks, enquiries, bookings and campaign-level conversion actions.</span><b>Paid media measurement</b><i>↗</i></Link><Link href="/services/crm-repeat-customers"><span>Measure database growth, campaign response, win-back activity and repeat-customer outcomes where systems allow.</span><b>CRM + retention measurement</b><i>↗</i></Link><Link href="/pricing"><span>Compare the scope and monthly investment before deciding what level of marketing makes sense.</span><b>Hospitality marketing pricing</b><i>↗</i></Link></div></section>
+      <section className="work-behind section-pad"><p className="eyebrow light">Ready for real case studies</p><h2>When the proof is approved,<br/><em>the case goes here.</em></h2><p>We will publish verified client stories with enough context to make the result useful, including the problem, baseline, work, period, outcome and data source.</p><Link className="button button-cream" href="/start">Give us a measurable problem <span>↗</span></Link></section>
+    </main>
+  </>;
+}
