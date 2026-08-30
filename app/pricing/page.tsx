@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LeadForm from "../components/lead-form";
 
 export const metadata: Metadata = {
   title: "Hospitality Marketing Pricing from £165",
@@ -47,8 +48,8 @@ const plans = [
 function Header() {
   return <header className="site-header">
     <a className="site-logo" href="/" aria-label="No Quiet Nights"><span className="brand-mark"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></span></a>
-    <nav className="desktop-nav"><a href="/services">Services</a><a href="#monthly">Plans</a><a href="/team">Team</a><a href="/reviews">Reviews</a></nav>
-    <a className="nav-cta" href="/start">Start a project <span>↗</span></a>
+    <nav className="desktop-nav"><a href="/services">Services</a><a href="#monthly">Plans</a><a href="/team">Team</a><a href="/reviews">Reviews</a><a href="/contact">Contact</a></nav>
+    <a className="nav-cta" href="/contact">Start a project <span>↗</span></a>
   </header>;
 }
 
@@ -103,7 +104,9 @@ export default function PricingPage() {
         <a className="button button-signal" href="/start?download=growth-playbook">Get the free growth playbook <span>↗</span></a>
       </section>
 
-      <section className="pricing-final"><span>Still comparing?</span><h2>Bring us the quiet bit.<br/><em>We'll find the leak.</em></h2><p>Tell us about a slow day, underused room, weak launch or marketing that feels busy but is not bringing enough customers. We will tell you where we would start.</p><a className="button button-cream" href="/start">Tell us what is quiet <span>↗</span></a></section>
+      <LeadForm eyebrow="Pricing enquiry" heading="Not sure which plan fits? Tell us what needs help." />
+
+      <section className="pricing-final"><span>Still comparing?</span><h2>Bring us the quiet bit.<br/><em>We'll find the leak.</em></h2><p>Tell us about a slow day, underused room, weak launch or marketing that feels busy but is not bringing enough customers. We will tell you where we would start.</p><a className="button button-cream" href="/contact">Tell us what is quiet <span>↗</span></a></section>
     </main>
   </>;
 }
