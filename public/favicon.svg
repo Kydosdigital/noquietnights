@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="No Quiet Nights">
+  <rect width="512" height="512" rx="92" fill="#F2EDDF"/>
+  <path d="M74 70h116l152 180V70h96v372h-98L180 257v185H74z" fill="#11100E"/>
+  <circle cx="190" cy="338" r="86" fill="#F2EDDF" stroke="#11100E" stroke-width="28"/>
+  <circle cx="190" cy="338" r="21" fill="#FF472D"/>
+  <path d="M244 392l88 88" stroke="#11100E" stroke-width="28" stroke-linecap="square"/>
+</svg>
