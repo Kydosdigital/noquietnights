@@ -35,7 +35,7 @@ export default function RestaurantsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="restaurant-hero page-top">
-        <div className="restaurant-hero-photo"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1800&q=86" alt="Chef plating dishes during a busy UK restaurant service" /></div>
+        <div className="restaurant-hero-photo"><img src="/images/stock/chef-24-team-plating-kitchen.jpg" alt="Chefs plating dishes during restaurant service" /></div>
         <div className="restaurant-hero-copy">
           <p className="eyebrow">Restaurant marketing agency UK · Plans from £165/month</p>
           <h1>Fill the week.<br/><em>Not just Saturday.</em></h1>
