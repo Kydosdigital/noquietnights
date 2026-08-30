@@ -1,0 +1,6 @@
+/* Official No Quiet Nights brand mark */
+.brand-mark{width:158px;height:52px;display:block!important;flex:none;background:url("/brand/no-quiet-nights-logo.svg") no-repeat left center/contain;font-size:0!important;line-height:0!important;letter-spacing:0!important}
+.brand-mark>span{display:none!important}
+.mobile-nav-top .brand-mark,.site-footer .brand-mark{background-image:url("/brand/no-quiet-nights-logo-reversed.svg")}
+.site-logo{padding-top:9px;padding-bottom:9px}
+@media(max-width:900px){.brand-mark{width:146px;height:48px}.site-logo{padding-left:16px;padding-right:16px}}
