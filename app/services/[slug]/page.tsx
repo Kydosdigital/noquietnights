@@ -1,19 +1,92 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getService, services } from "../service-data";
 import ServiceHeader from "../service-header";
 
+const siteUrl = "https://www.noquietnights.co.uk";
+
+const seo: Record<string, { title: string; description: string }> = {
+  "social-media-management": {
+    title: "Hospitality Social Media Management UK",
+    description: "Social media management for UK restaurants, pubs and bars, built around consistent content, offers, events and reasons to visit.",
+  },
+  "paid-ads": {
+    title: "Hospitality PPC Agency UK | Google & Meta Ads",
+    description: "Google Ads and Meta advertising for UK restaurants, pubs and bars, built around bookings, events, private hire and local demand.",
+  },
+  "local-seo": {
+    title: "Local SEO for Restaurants, Pubs & Bars UK",
+    description: "Local SEO for UK restaurants, pubs and bars, including Google Business Profile, Maps visibility, reviews and website SEO.",
+  },
+  "content-production": {
+    title: "Hospitality Photography & Video Content UK",
+    description: "Photography, videography and short-form content production for UK restaurants, pubs, bars and hospitality campaigns.",
+  },
+  "crm-repeat-customers": {
+    title: "Hospitality CRM & Customer Retention Marketing UK",
+    description: "CRM, email, SMS, win-back and repeat-customer marketing for UK restaurants, pubs and bars using permission-based customer data.",
+  },
+  "website-conversion": {
+    title: "Hospitality Website & Conversion Optimisation UK",
+    description: "Hospitality website and landing-page optimisation for UK restaurants, pubs and bars, improving booking and enquiry journeys.",
+  },
+  "launch-growth-strategy": {
+    title: "Hospitality Marketing Strategy UK | Launch & Growth",
+    description: "Hospitality marketing strategy for restaurant and bar launches, quiet periods and growth plans across SEO, content, ads, CRM and offers.",
+  },
+};
+
+const relatedGuides: Record<string, { label: string; href: string }[]> = {
+  "social-media-management": [
+    { label: "Restaurant social media management cost UK", href: "/insights/restaurant-social-media-management-cost-uk" },
+    { label: "Pub social media management cost UK", href: "/insights/pub-social-media-management-cost-uk" },
+    { label: "Drinks brand social media management cost UK", href: "/insights/drinks-brand-social-media-management-cost-uk" },
+  ],
+  "paid-ads": [
+    { label: "Hospitality paid media management cost UK", href: "/insights/hospitality-paid-media-management-cost-uk" },
+    { label: "Hospitality SEO vs Google Ads", href: "/insights/hospitality-seo-vs-google-ads" },
+    { label: "Google Ads vs Meta Ads for restaurants", href: "/insights/google-ads-vs-meta-ads-restaurants" },
+  ],
+  "local-seo": [
+    { label: "Hospitality local SEO cost UK", href: "/insights/hospitality-local-seo-cost-uk" },
+    { label: "Restaurant SEO cost UK", href: "/insights/restaurant-seo-cost-uk" },
+    { label: "Pub SEO cost UK", href: "/insights/pub-seo-cost-uk" },
+  ],
+  "crm-repeat-customers": [
+    { label: "Hospitality email marketing and CRM cost UK", href: "/insights/hospitality-email-marketing-crm-cost-uk" },
+  ],
+  "website-conversion": [
+    { label: "Hospitality website cost UK", href: "/insights/hospitality-website-cost-uk" },
+    { label: "Drinks brand website cost UK", href: "/insights/drinks-brand-website-cost-uk" },
+  ],
+  "launch-growth-strategy": [
+    { label: "How much should a restaurant spend on marketing?", href: "/insights/how-much-should-restaurant-spend-on-marketing-uk" },
+    { label: "How much should a pub spend on marketing?", href: "/insights/how-much-should-pub-spend-marketing-uk" },
+    { label: "How much should you spend launching a drinks brand?", href: "/insights/how-much-should-you-spend-launching-a-drinks-brand-uk" },
+  ],
+};
+
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
+  const target = seo[slug] ?? { title: `${service.eyebrow} for Hospitality`, description: service.promise };
+
   return {
-    title: `${service.eyebrow} for hospitality | NO QUIET NIGHTS`,
-    description: service.promise
+    title: target.title,
+    description: target.description,
+    alternates: { canonical: `/services/${slug}` },
+    openGraph: {
+      title: `${target.title} | No Quiet Nights`,
+      description: target.description,
+      url: `/services/${slug}`,
+      type: "website",
+    },
   };
 }
 
@@ -22,10 +95,37 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = getService(slug);
   if (!service) notFound();
 
+  const target = seo[slug] ?? { title: service.eyebrow, description: service.promise };
+  const guides = relatedGuides[slug] ?? [];
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        name: target.title,
+        serviceType: service.eyebrow,
+        description: target.description,
+        url: `${siteUrl}/services/${slug}`,
+        provider: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "No Quiet Nights" },
+        areaServed: { "@type": "Country", name: "United Kingdom" },
+        audience: { "@type": "Audience", audienceType: "Restaurants, pubs, bars and hospitality operators" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Hospitality Marketing Services", item: `${siteUrl}/services` },
+          { "@type": "ListItem", position: 3, name: service.eyebrow, item: `${siteUrl}/services/${slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
       <ServiceHeader />
       <main className="service-detail-page">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <section className="service-detail-hero">
           <div className="service-detail-copy">
             <p className="eyebrow">{service.eyebrow}</p>
@@ -64,10 +164,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             {service.work.map((item, index) => (
               <article key={item.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
+                <div><h3>{item.title}</h3><p>{item.text}</p></div>
               </article>
             ))}
           </div>
@@ -81,11 +178,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
           <div className="proof-grid">
             {service.proof.map((item) => (
-              <article key={item.label}>
-                <span>We track</span>
-                <h3>{item.label}</h3>
-                <p>{item.text}</p>
-              </article>
+              <article key={item.label}><span>We track</span><h3>{item.label}</h3><p>{item.text}</p></article>
             ))}
           </div>
         </section>
@@ -93,10 +186,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="service-fit section-pad">
           <p className="eyebrow light">This is useful if</p>
           <h2>This service makes sense when...</h2>
-          <ul>
-            {service.bestFor.map((item) => <li key={item}><span>✓</span>{item}</li>)}
-          </ul>
+          <ul>{service.bestFor.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul>
         </section>
+
+        {guides.length > 0 && (
+          <section className="service-outcomes section-pad">
+            <p className="eyebrow">Buyer guides</p>
+            <h2>Research the decision<br/><em>before you commit.</em></h2>
+            <div className="outcome-grid">
+              {guides.map((guide, index) => (
+                <article key={guide.href}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3><Link href={guide.href}>{guide.label} →</Link></h3>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="service-next section-pad">
           <p className="eyebrow">Need more than one service?</p>
@@ -104,7 +210,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <p>We can combine social media, Google, ads, customer follow-up and repeat-customer marketing into one clear plan.</p>
           <div>
             <Link href="/pricing#monthly" className="button button-ink">See monthly plans <span>↗</span></Link>
-            <Link href="/services" className="text-link">Explore all services →</Link>
+            <Link href="/contact" className="text-link">Tell us what needs help →</Link>
           </div>
         </section>
       </main>
