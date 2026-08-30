@@ -1,13 +1,6 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import styles from "./insights-shell.module.css";
-
-const primaryLinks = [
-  { href: "/restaurants", label: "Restaurants" },
-  { href: "/pubs-bars", label: "Pubs + bars" },
-  { href: "/drinks-brands", label: "Drinks brands" },
-  { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
-];
 
 const pathwayLinks = [
   {
@@ -33,41 +26,21 @@ const pathwayLinks = [
 export default function InsightsLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <div className={styles.shell}>
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <a className={styles.logoLink} href="/" aria-label="No Quiet Nights home">
-            <img
-              className={styles.logo}
-              src="/brand/no-quiet-nights-logo.svg"
-              alt="No Quiet Nights"
-              width="158"
-              height="52"
-            />
-          </a>
-
-          <nav className={styles.nav} aria-label="Main navigation">
-            {primaryLinks.map((link) => (
-              <a href={link.href} key={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <a className={styles.headerCta} href="/start">
-            Tell us the quiet bit
-          </a>
-        </div>
+      <header className="site-header">
+        <Link className="site-logo" href="/" aria-label="No Quiet Nights">
+          <span className="brand-mark"><span>NO QUIET</span><span>NIGHTS<i>•</i></span></span>
+        </Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          <Link href="/services">Services</Link>
+          <Link href="/restaurants">Restaurants</Link>
+          <Link href="/pubs-bars">Pubs + bars</Link>
+          <Link href="/drinks-brands">Drinks brands</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/insights">Insights</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
+        <Link className="nav-cta" href="/contact">Start a project <span>↗</span></Link>
       </header>
-
-      <div className={styles.contextBar}>
-        <div className={styles.contextInner}>
-          <span>NO QUIET NIGHTS INSIGHTS</span>
-          <p>
-            Practical hospitality growth advice from the team behind plans starting at £165/month.
-          </p>
-          <a href="/pricing">See the plans</a>
-        </div>
-      </div>
 
       {children}
 
@@ -91,8 +64,8 @@ export default function InsightsLayout({ children }: Readonly<{ children: ReactN
           </div>
 
           <div className={styles.bridgeActions}>
-            <a className={styles.primaryAction} href="/start">
-              Tell us the quiet bit
+            <a className={styles.primaryAction} href="/contact">
+              Start a project
             </a>
             <a className={styles.secondaryAction} href="/pricing">
               Compare plans from £165
@@ -130,7 +103,7 @@ export default function InsightsLayout({ children }: Readonly<{ children: ReactN
             <strong>Work with us</strong>
             <a href="/services">Services</a>
             <a href="/pricing">Pricing</a>
-            <a href="/start">Get a starting point</a>
+            <a href="/contact">Start a project</a>
           </div>
 
           <div className={styles.footerColumn}>
@@ -148,7 +121,7 @@ export default function InsightsLayout({ children }: Readonly<{ children: ReactN
 
       <div className={styles.mobileCta}>
         <span>Need more covers or footfall?</span>
-        <a href="/start">Tell us the quiet bit</a>
+        <a href="/contact">Start a project</a>
       </div>
     </div>
   );
