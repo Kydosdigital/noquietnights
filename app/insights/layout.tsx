@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./insights-shell.module.css";
 
+// Shared insights shell intentionally reuses the main site navigation.
 const pathwayLinks = [
   {
     href: "/restaurants",
