@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import SiteFooter from "./components/site-footer";
 import "../recovery/deployed-assets/_next/static/chunks/0eay0~-68.o85.css";
 import "./overrides.css";
 import "./brand.css";
+import "./site-footer.css";
 
 const siteUrl = "https://www.noquietnights.co.uk";
 const isProduction = process.env.VERCEL_ENV === "production";
@@ -80,9 +82,10 @@ const organisationSchema = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
-      <body>
+      <body id="top">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationSchema) }} />
         {children}
+        <SiteFooter />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-726NVF79ZM" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
