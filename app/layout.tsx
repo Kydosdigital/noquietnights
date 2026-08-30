@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import SiteHeader from "./components/site-header";
 import SiteFooter from "./components/site-footer";
 import "../recovery/deployed-assets/_next/static/chunks/0eay0~-68.o85.css";
 import "./overrides.css";
 import "./brand.css";
+import "./site-header.css";
 import "./site-footer.css";
 
 const siteUrl = "https://www.noquietnights.co.uk";
@@ -84,6 +86,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-GB">
       <body id="top">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationSchema) }} />
+        <SiteHeader />
         {children}
         <SiteFooter />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-726NVF79ZM" strategy="afterInteractive" />
