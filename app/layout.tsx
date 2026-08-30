@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "../recovery/deployed-assets/_next/static/chunks/0eay0~-68.o85.css";
 import "./overrides.css";
+import "./brand.css";
 
 const siteUrl = "https://www.noquietnights.co.uk";
 const isProduction = process.env.VERCEL_ENV === "production";
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
   creator: "No Quiet Nights",
   publisher: "No Quiet Nights",
   category: "Hospitality Marketing",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+  },
   formatDetection: { email: false, address: false, telephone: false },
   robots: isProduction
     ? {
@@ -56,6 +61,7 @@ const organisationSchema = {
       "@id": `${siteUrl}/#organization`,
       name: "No Quiet Nights",
       url: siteUrl,
+      logo: `${siteUrl}/brand/no-quiet-nights-logo.svg`,
       description: "UK hospitality marketing agency for restaurants, pubs, bars and drinks brands.",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       knowsAbout: ["Hospitality marketing", "Restaurant marketing", "Pub marketing", "Bar marketing", "Drinks brand marketing", "Local SEO", "Social media management", "Paid advertising", "Customer retention"],
