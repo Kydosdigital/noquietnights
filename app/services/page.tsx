@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LeadForm from "../components/lead-form";
 import { services } from "./service-data";
 import ServiceHeader from "./service-header";
 
@@ -39,8 +40,10 @@ export default function ServicesPage() {
           <p className="eyebrow light">We measure what matters</p>
           <h2>You should know what<br/><em>your marketing is doing.</em></h2>
           <p>Depending on the work, we track things like Google searches, website visits, enquiries, bookings, ad results, customer list growth and repeat-customer campaigns.</p>
-          <Link href="/start" className="button button-cream">Tell us what you need help with <span>↗</span></Link>
+          <Link href="/contact" className="button button-cream">Tell us what you need help with <span>↗</span></Link>
         </section>
+
+        <LeadForm eyebrow="Service enquiry" heading="Tell us which part of the marketing needs help." />
       </main>
     </>
   );

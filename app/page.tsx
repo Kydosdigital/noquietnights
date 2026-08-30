@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LeadForm, { contactEmailDisplay, contactEmailHref } from "./components/lead-form";
 
 export const metadata: Metadata = {
   title: "Hospitality Marketing Agency UK",
@@ -39,8 +40,9 @@ export default function Home() {
           <Link href="/team">Team</Link>
           <Link href="/reviews">Reviews</Link>
           <Link href="/insights">Insights</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
-        <Link className="nav-cta" href="/start">Start a project <span>↗</span></Link>
+        <Link className="nav-cta" href="/contact">Start a project <span>↗</span></Link>
       </header>
 
       <main>
@@ -53,6 +55,7 @@ export default function Home() {
               <Link href="/services" className="button button-ink">See what we do <span>↗</span></Link>
               <Link href="/pricing" className="button button-signal">See pricing <span>↗</span></Link>
             </div>
+            <p style={{ marginTop: 16 }}>Prefer email? <a href={contactEmailHref}>{contactEmailDisplay}</a></p>
           </div>
           <div className="price-promise"><b>ONE</b><span>hospitality<br/>marketing team</span><i>SOCIAL · GOOGLE<br/>ADS · FOLLOW-UP</i></div>
         </section>
@@ -89,11 +92,13 @@ export default function Home() {
           </div>
         </section>
 
+        <LeadForm />
+
         <section className="pricing-final">
           <span>Got a quiet day, weak launch or marketing problem?</span>
           <h2>Bring us the quiet bit.<br/><em>We'll find the leak.</em></h2>
           <p>Tell us what is not working. We will tell you where we would start.</p>
-          <Link className="button button-cream" href="/start">Start a conversation <span>↗</span></Link>
+          <Link className="button button-cream" href="/contact">Start a conversation <span>↗</span></Link>
         </section>
       </main>
     </>

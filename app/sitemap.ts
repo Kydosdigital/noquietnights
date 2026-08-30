@@ -16,6 +16,21 @@ function getInsightSlugs() {
     .sort();
 }
 
+function getTopLevelLandingSlugs() {
+  const appDir = path.join(process.cwd(), "app");
+  const alreadyListed = new Set(["restaurants", "pubs-bars", "drinks-brands", "services", "pricing", "work", "about", "insights"]);
+  const excluded = new Set(["start", "team", "reviews", "privacy", "credits"]);
+
+  if (!fs.existsSync(appDir)) return [];
+
+  return fs.readdirSync(appDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .filter((slug) => !alreadyListed.has(slug) && !excluded.has(slug))
+    .filter((slug) => fs.existsSync(path.join(appDir, slug, "page.tsx")))
+    .sort();
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
     { url: siteUrl, changeFrequency: "weekly", priority: 1 },
@@ -35,11 +50,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const landingPages: MetadataRoute.Sitemap = getTopLevelLandingSlugs().map((slug) => ({
+    url: `${siteUrl}/${slug}`,
+    changeFrequency: "monthly",
+    priority: slug === "contact" ? 0.7 : 0.82,
+  }));
+
   const insightPages: MetadataRoute.Sitemap = getInsightSlugs().map((slug) => ({
     url: `${siteUrl}/insights/${slug}`,
     changeFrequency: "monthly",
     priority: 0.72,
   }));
 
-  return [...core, ...servicePages, ...insightPages];
+  return [...core, ...servicePages, ...landingPages, ...insightPages];
 }

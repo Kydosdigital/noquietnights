@@ -13,8 +13,9 @@ export default function ServiceHeader() {
         <Link href="/drinks-brands">Drinks brands</Link>
         <Link href="/pricing">Pricing</Link>
         <Link href="/insights">Insights</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
-      <Link className="nav-cta" href="/start">Start a project <span>↗</span></Link>
+      <Link className="nav-cta" href="/contact">Start a project <span>↗</span></Link>
     </header>
   );
 }
